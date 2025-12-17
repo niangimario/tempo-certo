@@ -5,8 +5,8 @@ import { Progress } from "@/components/ui/progress";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog";
-import { Clock, AlertTriangle, Send, ChevronLeft, ChevronRight } from "lucide-react";
-import type { TestConfig, Question } from "@shared/schema";
+import { Clock, AlertTriangle, Send, ChevronLeft, ChevronRight, Check } from "lucide-react";
+import type { TestConfig } from "@shared/schema";
 
 interface TestPageProps {
   testConfig: TestConfig;
@@ -77,95 +77,147 @@ export function TestPage({ testConfig, sessionId, startTime, onSubmit, isSubmitt
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
-      <header className={`sticky top-0 z-50 bg-card border-b transition-colors ${isCriticalTime ? 'border-destructive/50' : isLowTime ? 'border-yellow-500/50' : 'border-border'}`}>
-        <div className="max-w-4xl mx-auto px-4 py-3">
-          <div className="flex items-center justify-between gap-4 mb-2">
-            <div className="flex items-center gap-3">
-              <div className={`flex items-center gap-2 px-3 py-1.5 rounded-lg ${isCriticalTime ? 'bg-destructive/10 text-destructive' : isLowTime ? 'bg-yellow-500/10 text-yellow-600 dark:text-yellow-400' : 'bg-muted'}`}>
-                <Clock className="w-4 h-4" />
-                <span className="font-mono text-lg font-bold" data-testid="text-timer">
-                  {formatTime(timeRemaining)}
-                </span>
+      <header className={`sticky top-0 z-50 backdrop-blur-md border-b transition-all duration-300 ${
+        isCriticalTime 
+          ? 'bg-destructive/10 border-destructive/30' 
+          : isLowTime 
+          ? 'bg-yellow-500/10 border-yellow-500/30' 
+          : 'bg-card/95 border-border'
+      }`}>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-4">
+          <div className="flex items-center justify-between gap-6 mb-3">
+            <div className="flex items-center gap-4">
+              <div className={`flex items-center gap-3 px-5 py-3 rounded-xl font-mono text-2xl font-bold transition-all duration-300 ${
+                isCriticalTime 
+                  ? 'bg-destructive text-destructive-foreground animate-pulse' 
+                  : isLowTime 
+                  ? 'bg-yellow-500 text-white' 
+                  : 'bg-muted text-foreground'
+              }`}>
+                <Clock className="w-5 h-5" />
+                <span data-testid="text-timer">{formatTime(timeRemaining)}</span>
               </div>
+              
               {isLowTime && (
-                <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                <div className={`flex items-center gap-2 text-sm font-medium ${
+                  isCriticalTime ? 'text-destructive' : 'text-yellow-600 dark:text-yellow-400'
+                }`}>
                   <AlertTriangle className="w-4 h-4" />
-                  <span>{isCriticalTime ? "Almost out of time!" : "Less than 5 minutes"}</span>
+                  <span className="hidden sm:inline">
+                    {isCriticalTime ? "Final minute!" : "Less than 5 minutes"}
+                  </span>
                 </div>
               )}
             </div>
-            <div className="text-sm text-muted-foreground" data-testid="text-progress">
-              {answeredCount} of {totalQuestions} answered
+            
+            <div className="text-right">
+              <div className="text-sm font-medium text-foreground" data-testid="text-progress">
+                {answeredCount} of {totalQuestions}
+              </div>
+              <div className="text-xs text-muted-foreground">answered</div>
             </div>
           </div>
-          <Progress 
-            value={timeProgressPercent} 
-            className={`h-1.5 ${isCriticalTime ? '[&>div]:bg-destructive' : isLowTime ? '[&>div]:bg-yellow-500' : ''}`}
-          />
+          
+          <div className="relative h-2 bg-muted rounded-full overflow-hidden">
+            <div 
+              className={`absolute left-0 top-0 h-full transition-all duration-1000 ease-linear rounded-full ${
+                isCriticalTime 
+                  ? 'bg-destructive' 
+                  : isLowTime 
+                  ? 'bg-yellow-500' 
+                  : 'bg-primary'
+              }`}
+              style={{ width: `${timeProgressPercent}%` }}
+            />
+          </div>
         </div>
       </header>
 
-      <main className="flex-1 py-6 px-4">
+      <main className="flex-1 py-8 px-4 sm:px-6">
         <div className="max-w-3xl mx-auto">
-          <div className="flex items-center justify-between mb-6">
-            <span className="text-sm font-medium text-muted-foreground">
-              Question {currentQuestionIndex + 1} of {totalQuestions}
-            </span>
-            <div className="flex items-center gap-1">
-              {testConfig.questions.map((q, idx) => (
-                <button
-                  key={q.id}
-                  onClick={() => goToQuestion(idx)}
-                  className={`w-8 h-8 rounded-md text-xs font-medium transition-colors hover-elevate active-elevate-2 ${
-                    idx === currentQuestionIndex
-                      ? 'bg-primary text-primary-foreground'
-                      : answers[q.id.toString()] !== undefined
-                      ? 'bg-chart-3/20 text-chart-3'
-                      : 'bg-muted text-muted-foreground'
-                  }`}
-                  data-testid={`button-question-nav-${idx}`}
-                >
-                  {idx + 1}
-                </button>
-              ))}
+          <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
+            <div className="flex items-center gap-3">
+              <span className="px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-semibold">
+                Question {currentQuestionIndex + 1}
+              </span>
+              <span className="text-muted-foreground">of {totalQuestions}</span>
+            </div>
+            
+            <div className="flex items-center gap-1.5 flex-wrap">
+              {testConfig.questions.map((q, idx) => {
+                const isAnswered = answers[q.id.toString()] !== undefined;
+                const isCurrent = idx === currentQuestionIndex;
+                
+                return (
+                  <button
+                    key={q.id}
+                    onClick={() => goToQuestion(idx)}
+                    className={`relative w-9 h-9 rounded-lg text-xs font-semibold transition-all duration-200 hover-elevate active-elevate-2 ${
+                      isCurrent
+                        ? 'bg-primary text-primary-foreground shadow-md'
+                        : isAnswered
+                        ? 'bg-chart-3/20 text-chart-3 border-2 border-chart-3/30'
+                        : 'bg-muted text-muted-foreground hover:bg-muted/80'
+                    }`}
+                    data-testid={`button-question-nav-${idx}`}
+                  >
+                    {isAnswered && !isCurrent ? (
+                      <Check className="w-4 h-4 mx-auto" />
+                    ) : (
+                      idx + 1
+                    )}
+                  </button>
+                );
+              })}
             </div>
           </div>
 
-          <Card className="mb-6">
-            <CardContent className="p-6 sm:p-8">
-              <h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-8" data-testid="text-question">
+          <Card className="mb-8 shadow-lg border-2">
+            <CardContent className="p-8 sm:p-10">
+              <h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-10 leading-relaxed" data-testid="text-question">
                 {currentQuestion.text}
               </h2>
 
               <RadioGroup
                 value={answers[currentQuestion.id.toString()]?.toString() || ""}
                 onValueChange={(value) => handleAnswerChange(currentQuestion.id, parseInt(value))}
-                className="space-y-3"
+                className="space-y-4"
               >
-                {currentQuestion.options.map((option, idx) => (
-                  <div
-                    key={idx}
-                    className={`relative flex items-center rounded-lg border p-4 cursor-pointer transition-colors hover-elevate ${
-                      answers[currentQuestion.id.toString()] === idx
-                        ? 'border-primary bg-primary/5'
-                        : 'border-border'
-                    }`}
-                    onClick={() => handleAnswerChange(currentQuestion.id, idx)}
-                  >
-                    <RadioGroupItem
-                      value={idx.toString()}
-                      id={`option-${idx}`}
-                      className="mr-4"
-                      data-testid={`radio-option-${idx}`}
-                    />
-                    <Label
-                      htmlFor={`option-${idx}`}
-                      className="flex-1 cursor-pointer text-foreground"
+                {currentQuestion.options.map((option, idx) => {
+                  const isSelected = answers[currentQuestion.id.toString()] === idx;
+                  
+                  return (
+                    <div
+                      key={idx}
+                      className={`relative flex items-center rounded-xl border-2 p-5 cursor-pointer transition-all duration-200 hover-elevate ${
+                        isSelected
+                          ? 'border-primary bg-primary/5 shadow-md'
+                          : 'border-border hover:border-muted-foreground/30'
+                      }`}
+                      onClick={() => handleAnswerChange(currentQuestion.id, idx)}
                     >
-                      {option}
-                    </Label>
-                  </div>
-                ))}
+                      <div className={`flex-shrink-0 w-6 h-6 rounded-full border-2 mr-4 flex items-center justify-center transition-all duration-200 ${
+                        isSelected 
+                          ? 'border-primary bg-primary' 
+                          : 'border-muted-foreground/40'
+                      }`}>
+                        {isSelected && <Check className="w-3.5 h-3.5 text-primary-foreground" />}
+                      </div>
+                      <RadioGroupItem
+                        value={idx.toString()}
+                        id={`option-${idx}`}
+                        className="sr-only"
+                        data-testid={`radio-option-${idx}`}
+                      />
+                      <Label
+                        htmlFor={`option-${idx}`}
+                        className="flex-1 cursor-pointer text-foreground text-base"
+                      >
+                        {option}
+                      </Label>
+                    </div>
+                  );
+                })}
               </RadioGroup>
             </CardContent>
           </Card>
@@ -173,76 +225,154 @@ export function TestPage({ testConfig, sessionId, startTime, onSubmit, isSubmitt
           <div className="flex items-center justify-between gap-4">
             <Button
               variant="outline"
+              size="lg"
               onClick={() => goToQuestion(currentQuestionIndex - 1)}
               disabled={currentQuestionIndex === 0}
-              className="gap-2"
+              className="gap-2 px-6"
               data-testid="button-prev-question"
             >
               <ChevronLeft className="w-4 h-4" />
               Previous
             </Button>
 
-            {currentQuestionIndex < totalQuestions - 1 ? (
-              <Button
-                onClick={() => goToQuestion(currentQuestionIndex + 1)}
-                className="gap-2"
-                data-testid="button-next-question"
-              >
-                Next
-                <ChevronRight className="w-4 h-4" />
-              </Button>
-            ) : (
-              <AlertDialog open={showSubmitDialog} onOpenChange={setShowSubmitDialog}>
-                <AlertDialogTrigger asChild>
-                  <Button className="gap-2" data-testid="button-submit-test">
-                    <Send className="w-4 h-4" />
-                    Submit Test
-                  </Button>
-                </AlertDialogTrigger>
-                <AlertDialogContent>
-                  <AlertDialogHeader>
-                    <AlertDialogTitle>Submit your test?</AlertDialogTitle>
-                    <AlertDialogDescription>
-                      You have answered {answeredCount} of {totalQuestions} questions.
-                      {answeredCount < totalQuestions && (
-                        <span className="block mt-2 text-yellow-600 dark:text-yellow-400">
-                          Warning: {totalQuestions - answeredCount} question(s) are unanswered and will be marked as incorrect.
+            <div className="flex items-center gap-3">
+              {currentQuestionIndex < totalQuestions - 1 ? (
+                <Button
+                  size="lg"
+                  onClick={() => goToQuestion(currentQuestionIndex + 1)}
+                  className="gap-2 px-6"
+                  data-testid="button-next-question"
+                >
+                  Next
+                  <ChevronRight className="w-4 h-4" />
+                </Button>
+              ) : (
+                <AlertDialog open={showSubmitDialog} onOpenChange={setShowSubmitDialog}>
+                  <AlertDialogTrigger asChild>
+                    <Button size="lg" className="gap-2 px-8" data-testid="button-submit-test">
+                      <Send className="w-4 h-4" />
+                      Submit Test
+                    </Button>
+                  </AlertDialogTrigger>
+                  <AlertDialogContent className="sm:max-w-md">
+                    <AlertDialogHeader>
+                      <AlertDialogTitle className="text-xl">Submit your assessment?</AlertDialogTitle>
+                      <AlertDialogDescription className="text-base">
+                        <span className="block mb-3">
+                          You have answered <strong className="text-foreground">{answeredCount}</strong> of <strong className="text-foreground">{totalQuestions}</strong> questions.
                         </span>
-                      )}
-                    </AlertDialogDescription>
-                  </AlertDialogHeader>
-                  <AlertDialogFooter>
-                    <AlertDialogCancel data-testid="button-cancel-submit">Continue Test</AlertDialogCancel>
-                    <AlertDialogAction 
-                      onClick={() => handleSubmit(false)}
-                      disabled={isSubmitting}
-                      data-testid="button-confirm-submit"
-                    >
-                      {isSubmitting ? "Submitting..." : "Submit Now"}
-                    </AlertDialogAction>
-                  </AlertDialogFooter>
-                </AlertDialogContent>
-              </AlertDialog>
-            )}
+                        {answeredCount < totalQuestions && (
+                          <span className="flex items-start gap-2 p-3 rounded-lg bg-yellow-500/10 text-yellow-600 dark:text-yellow-400">
+                            <AlertTriangle className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                            <span>{totalQuestions - answeredCount} unanswered question(s) will be marked as incorrect.</span>
+                          </span>
+                        )}
+                      </AlertDialogDescription>
+                    </AlertDialogHeader>
+                    <AlertDialogFooter className="gap-3 sm:gap-2">
+                      <AlertDialogCancel className="sm:w-auto" data-testid="button-cancel-submit">
+                        Continue Test
+                      </AlertDialogCancel>
+                      <AlertDialogAction 
+                        onClick={() => handleSubmit(false)}
+                        disabled={isSubmitting}
+                        className="sm:w-auto gap-2"
+                        data-testid="button-confirm-submit"
+                      >
+                        {isSubmitting ? (
+                          <>
+                            <div className="w-4 h-4 border-2 border-primary-foreground border-t-transparent rounded-full animate-spin" />
+                            Submitting...
+                          </>
+                        ) : (
+                          <>
+                            <Send className="w-4 h-4" />
+                            Submit Now
+                          </>
+                        )}
+                      </AlertDialogAction>
+                    </AlertDialogFooter>
+                  </AlertDialogContent>
+                </AlertDialog>
+              )}
+            </div>
           </div>
         </div>
       </main>
 
-      <footer className="sticky bottom-0 bg-card border-t p-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-chart-3/30" />
-                <span className="text-sm text-muted-foreground">Answered</span>
+      <footer className="sticky bottom-0 z-40 bg-card/95 backdrop-blur-md border-t py-4 px-4 sm:px-6">
+        <div className="max-w-5xl mx-auto flex items-center justify-between gap-4">
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-2">
+              <div className="w-4 h-4 rounded-md bg-chart-3/30 border-2 border-chart-3/50 flex items-center justify-center">
+                <Check className="w-2.5 h-2.5 text-chart-3" />
               </div>
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-muted" />
-                <span className="text-sm text-muted-foreground">Unanswered</span>
+              <span className="text-sm text-muted-foreground hidden sm:inline">Answered</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-4 h-4 rounded-md bg-muted border-2 border-muted-foreground/20" />
+              <span className="text-sm text-muted-foreground hidden sm:inline">Unanswered</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-sm font-medium text-muted-foreground">
+                {Math.round(progressPercent)}%
+              </span>
+              <div className="w-20 h-2 bg-muted rounded-full overflow-hidden">
+                <div 
+                  className="h-full bg-chart-3 rounded-full transition-all duration-300"
+                  style={{ width: `${progressPercent}%` }}
+                />
               </div>
             </div>
-            <Progress value={progressPercent} className="w-32 h-2" />
           </div>
+          
+          <AlertDialog open={showSubmitDialog} onOpenChange={setShowSubmitDialog}>
+            <AlertDialogTrigger asChild>
+              <Button className="gap-2 shadow-lg" data-testid="button-submit-footer">
+                <Send className="w-4 h-4" />
+                <span className="hidden sm:inline">Submit Test</span>
+                <span className="sm:hidden">Submit</span>
+              </Button>
+            </AlertDialogTrigger>
+            <AlertDialogContent className="sm:max-w-md">
+              <AlertDialogHeader>
+                <AlertDialogTitle className="text-xl">Submit your assessment?</AlertDialogTitle>
+                <AlertDialogDescription className="text-base">
+                  <span className="block mb-3">
+                    You have answered <strong className="text-foreground">{answeredCount}</strong> of <strong className="text-foreground">{totalQuestions}</strong> questions.
+                  </span>
+                  {answeredCount < totalQuestions && (
+                    <span className="flex items-start gap-2 p-3 rounded-lg bg-yellow-500/10 text-yellow-600 dark:text-yellow-400">
+                      <AlertTriangle className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                      <span>{totalQuestions - answeredCount} unanswered question(s) will be marked as incorrect.</span>
+                    </span>
+                  )}
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter className="gap-3 sm:gap-2">
+                <AlertDialogCancel className="sm:w-auto">
+                  Continue Test
+                </AlertDialogCancel>
+                <AlertDialogAction 
+                  onClick={() => handleSubmit(false)}
+                  disabled={isSubmitting}
+                  className="sm:w-auto gap-2"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <div className="w-4 h-4 border-2 border-primary-foreground border-t-transparent rounded-full animate-spin" />
+                      Submitting...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-4 h-4" />
+                      Submit Now
+                    </>
+                  )}
+                </AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
         </div>
       </footer>
     </div>

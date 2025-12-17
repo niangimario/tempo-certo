@@ -97,10 +97,14 @@ function AssessmentApp() {
 
   if (appState === "loading" || isLoadingConfig || !testConfig) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-b from-background via-background to-muted/30 flex items-center justify-center">
         <div className="text-center">
-          <div className="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4" />
-          <p className="text-muted-foreground">Loading assessment...</p>
+          <div className="relative mb-8">
+            <div className="w-20 h-20 border-4 border-muted rounded-full" />
+            <div className="absolute inset-0 w-20 h-20 border-4 border-primary border-t-transparent rounded-full animate-spin" />
+          </div>
+          <h2 className="text-xl font-semibold text-foreground mb-2">Loading Assessment</h2>
+          <p className="text-muted-foreground">Please wait while we prepare your test...</p>
         </div>
       </div>
     );
