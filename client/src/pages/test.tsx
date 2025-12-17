@@ -13,7 +13,6 @@ interface TestPageProps {
   sessionId: string;
   startTime: number;
   onSubmit: (answers: Record<string, number>, timedOut: boolean) => void;
-  isSubmitting?: boolean;
 }
 
 function formatTime(seconds: number): string {
@@ -22,7 +21,7 @@ function formatTime(seconds: number): string {
   return `${mins.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
 }
 
-export function TestPage({ testConfig, sessionId, startTime, onSubmit, isSubmitting }: TestPageProps) {
+export function TestPage({ testConfig, sessionId, startTime, onSubmit }: TestPageProps) {
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [timeRemaining, setTimeRemaining] = useState(testConfig.durationMinutes * 60);
@@ -275,21 +274,11 @@ export function TestPage({ testConfig, sessionId, startTime, onSubmit, isSubmitt
                       </AlertDialogCancel>
                       <AlertDialogAction 
                         onClick={() => handleSubmit(false)}
-                        disabled={isSubmitting}
                         className="sm:w-auto gap-2"
                         data-testid="button-confirm-submit"
                       >
-                        {isSubmitting ? (
-                          <>
-                            <div className="w-4 h-4 border-2 border-primary-foreground border-t-transparent rounded-full animate-spin" />
-                            Submitting...
-                          </>
-                        ) : (
-                          <>
-                            <Send className="w-4 h-4" />
-                            Submit Now
-                          </>
-                        )}
+                        <Send className="w-4 h-4" />
+                        Submit Now
                       </AlertDialogAction>
                     </AlertDialogFooter>
                   </AlertDialogContent>
@@ -355,20 +344,10 @@ export function TestPage({ testConfig, sessionId, startTime, onSubmit, isSubmitt
                 </AlertDialogCancel>
                 <AlertDialogAction 
                   onClick={() => handleSubmit(false)}
-                  disabled={isSubmitting}
                   className="sm:w-auto gap-2"
                 >
-                  {isSubmitting ? (
-                    <>
-                      <div className="w-4 h-4 border-2 border-primary-foreground border-t-transparent rounded-full animate-spin" />
-                      Submitting...
-                    </>
-                  ) : (
-                    <>
-                      <Send className="w-4 h-4" />
-                      Submit Now
-                    </>
-                  )}
+                  <Send className="w-4 h-4" />
+                  Submit Now
                 </AlertDialogAction>
               </AlertDialogFooter>
             </AlertDialogContent>

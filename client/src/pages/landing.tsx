@@ -7,10 +7,9 @@ import type { TestConfig } from "@shared/schema";
 interface LandingPageProps {
   testConfig: TestConfig;
   onStartTest: () => void;
-  isLoading?: boolean;
 }
 
-export function LandingPage({ testConfig, onStartTest, isLoading }: LandingPageProps) {
+export function LandingPage({ testConfig, onStartTest }: LandingPageProps) {
   return (
     <div className="min-h-screen bg-gradient-to-b from-background via-background to-muted/30">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
@@ -148,21 +147,11 @@ export function LandingPage({ testConfig, onStartTest, isLoading }: LandingPageP
           <Button 
             size="lg" 
             onClick={onStartTest}
-            disabled={isLoading}
             className="px-12 py-7 text-lg font-semibold gap-3 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300"
             data-testid="button-start-test"
           >
-            {isLoading ? (
-              <>
-                <div className="w-5 h-5 border-2 border-primary-foreground border-t-transparent rounded-full animate-spin" />
-                Starting...
-              </>
-            ) : (
-              <>
-                Start Assessment
-                <ArrowRight className="w-5 h-5" />
-              </>
-            )}
+            Start Assessment
+            <ArrowRight className="w-5 h-5" />
           </Button>
           
           <p className="text-sm text-muted-foreground mt-6 max-w-md mx-auto">

@@ -47,41 +47,43 @@ export function ResultsPage({ result, testConfig, onRetake }: ResultsPageProps) 
 
         <Card className="mb-10 overflow-hidden shadow-xl border-2">
           <div className="relative bg-gradient-to-br from-primary/10 via-primary/5 to-transparent p-10 text-center">
-            <div className="relative inline-flex items-center justify-center mb-6">
-              <svg className="w-48 h-48" viewBox="0 0 180 180">
-                <circle
-                  cx="90"
-                  cy="90"
-                  r="80"
-                  stroke="currentColor"
-                  strokeWidth="12"
-                  fill="none"
-                  className="text-border"
-                />
-                <circle
-                  cx="90"
-                  cy="90"
-                  r="80"
-                  stroke="currentColor"
-                  strokeWidth="12"
-                  fill="none"
-                  strokeDasharray={`${(result.score / 100) * 502.65} 502.65`}
-                  strokeLinecap="round"
-                  className="text-primary transition-all duration-1000 ease-out"
-                  style={{ transform: 'rotate(-90deg)', transformOrigin: 'center' }}
-                />
-              </svg>
-              <div className="absolute inset-0 flex flex-col items-center justify-center">
-                <span className="text-6xl font-bold text-foreground" data-testid="text-score">
-                  {result.score}
-                </span>
-                <span className="text-xl text-muted-foreground font-medium">percent</span>
+            <div className="flex flex-col items-center">
+              <div className="relative inline-flex items-center justify-center mb-6">
+                <svg className="w-48 h-48" viewBox="0 0 180 180">
+                  <circle
+                    cx="90"
+                    cy="90"
+                    r="80"
+                    stroke="currentColor"
+                    strokeWidth="12"
+                    fill="none"
+                    className="text-border"
+                  />
+                  <circle
+                    cx="90"
+                    cy="90"
+                    r="80"
+                    stroke="currentColor"
+                    strokeWidth="12"
+                    fill="none"
+                    strokeDasharray={`${(result.score / 100) * 502.65} 502.65`}
+                    strokeLinecap="round"
+                    className="text-primary transition-all duration-1000 ease-out"
+                    style={{ transform: 'rotate(-90deg)', transformOrigin: 'center' }}
+                  />
+                </svg>
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                  <span className="text-6xl font-bold text-foreground" data-testid="text-score">
+                    {result.score}
+                  </span>
+                  <span className="text-xl text-muted-foreground font-medium">percent</span>
+                </div>
               </div>
+              
+              <Badge className={`${grade.bgColor} text-white px-5 py-2 text-base font-semibold`} data-testid="badge-grade">
+                {grade.label}
+              </Badge>
             </div>
-            
-            <Badge className={`${grade.bgColor} text-white px-5 py-2 text-base font-semibold`} data-testid="badge-grade">
-              {grade.label}
-            </Badge>
             
             <p className="text-muted-foreground mt-4 text-lg max-w-md mx-auto">
               {grade.message}
