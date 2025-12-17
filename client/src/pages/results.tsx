@@ -177,9 +177,6 @@ export function ResultsPage({ result, testConfig, onRetake }: ResultsPageProps) 
                     </AccordionTrigger>
                     <AccordionContent className="pb-5">
                       <div className="space-y-4 ml-12">
-                        <p className="text-foreground font-medium text-base leading-relaxed">
-                          {question.text}
-                        </p>
                         <div className="space-y-2">
                           {question.options.map((option, optIdx) => {
                             const isCorrect = optIdx === answer.correctOptionIndex;
