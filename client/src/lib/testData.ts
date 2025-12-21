@@ -4,7 +4,7 @@ export const testData: TestConfig = {
   id: "default-test",
   title: "Materials Science: Metals & Steel Assessment",
   description: "Comprehensive assessment on metal properties, ferrous metals, steel identification, aircraft alloys, and heat treatment. Test your knowledge on materials engineering. Answer all 15 questions within the time limit.",
-  durationMinutes: 20,
+  durationMinutes: 12,
   questions: [
     {
       id: 1,
