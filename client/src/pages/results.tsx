@@ -14,10 +14,8 @@ interface ResultsPageProps {
 function getScoreGrade(score: number): { label: string; color: string; bgColor: string; message: string; icon: typeof Trophy } {
   if (score >= 90) return { label: "Excellent", color: "text-emerald-600 dark:text-emerald-400", bgColor: "bg-emerald-500", message: "Outstanding performance! You've mastered this material.", icon: Trophy };
   if (score >= 80) return { label: "Very Good", color: "text-chart-3", bgColor: "bg-chart-3", message: "Great job! You have a strong understanding.", icon: Sparkles };
-  if (score >= 70) return { label: "Good", color: "text-chart-2", bgColor: "bg-chart-2", message: "Well done! Keep up the good work.", icon: TrendingUp };
-  if (score >= 60) return { label: "Satisfactory", color: "text-yellow-600 dark:text-yellow-400", bgColor: "bg-yellow-500", message: "You passed! Consider reviewing some topics.", icon: Target };
-  if (score >= 50) return { label: "Needs Work", color: "text-orange-600 dark:text-orange-400", bgColor: "bg-orange-500", message: "More practice recommended.", icon: Clock };
-  return { label: "Unsatisfactory", color: "text-destructive", bgColor: "bg-destructive", message: "Please review the material and try again.", icon: AlertTriangle };
+  if (score >= 75) return { label: "Satisfactory", color: "text-yellow-600 dark:text-yellow-400", bgColor: "bg-yellow-500", message: "You passed! Consider reviewing some topics.", icon: Target };
+  return { label: "Unsatisfactory", color: "text-destructive", bgColor: "bg-destructive", message: "Reproved! Score below 75%. Please review the material and try again.", icon: AlertTriangle };
 }
 
 export function ResultsPage({ result, testConfig, onRetake }: ResultsPageProps) {
