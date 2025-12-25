@@ -15,7 +15,7 @@ function getScoreGrade(score: number): { label: string; color: string; bgColor: 
   if (score >= 90) return { label: "Excellent", color: "text-emerald-600 dark:text-emerald-400", bgColor: "bg-emerald-500", message: "Outstanding performance! You've mastered this material.", icon: Trophy };
   if (score >= 80) return { label: "Very Good", color: "text-chart-3", bgColor: "bg-chart-3", message: "Great job! You have a strong understanding.", icon: Sparkles };
   if (score >= 75) return { label: "Satisfactory", color: "text-yellow-600 dark:text-yellow-400", bgColor: "bg-yellow-500", message: "You passed! Consider reviewing some topics.", icon: Target };
-  return { label: "Unsatisfactory", color: "text-destructive", bgColor: "bg-destructive", message: "Reproved! Score below 75%. Please review the material and try again.", icon: AlertTriangle };
+  return { label: "Not Passed", color: "text-destructive", bgColor: "bg-destructive", message: "Not passed! Score below 75%. Please review the material and try again.", icon: AlertTriangle };
 }
 
 export function ResultsPage({ result, testConfig, onRetake }: ResultsPageProps) {
