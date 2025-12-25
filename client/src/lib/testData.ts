@@ -4,7 +4,7 @@ export const testData: TestConfig = {
   id: "default-test",
   title: "Non-Ferrous Metals & Alloys Assessment",
   description: "Comprehensive assessment on aluminum, magnesium, titanium, nickel, copper alloys, and heat treatment processes. Test your knowledge on aerospace materials engineering. Answer all 40 questions within the time limit.",
-  durationMinutes: 60,
+  durationMinutes: 40,
   questions: [
     {
       id: 1,
