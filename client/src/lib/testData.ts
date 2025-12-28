@@ -2,7 +2,7 @@ import type { TestConfig } from "@shared/schema";
 
 export const testData: TestConfig = {
   id: "default-test",
-  title: "Module 9 – Human Factors: Review Questions (Modules 9.1–9.3)",
+  title: "Human Factors",
   description: "Avaliação sobre Human Factors em Aviation Maintenance. Responda todas as 45 questões de revisão sobre factores humanos, desempenho humano e psicologia social. Tempo limite: 45 minutos.",
   durationMinutes: 45,
   questions: [
