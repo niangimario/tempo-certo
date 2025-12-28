@@ -40,7 +40,7 @@ export function LandingPage({ testConfig, onStartTest }: LandingPageProps) {
           
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
             <Sparkles className="w-4 h-4" />
-            Assessment Platform
+            Professional Assessment Platform
           </div>
           
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight leading-tight" data-testid="text-test-title">
