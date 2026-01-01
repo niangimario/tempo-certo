@@ -5,8 +5,8 @@ import { useToast } from "@/hooks/use-toast";
 import LandingPage from "@/pages/landing";
 import TestPage from "@/pages/test";
 import ResultsPage from "@/pages/results";
-import { testData } from "./lib/testData";
-import type { TestResult, TestSession } from "@shared/schema";
+import { getTestByName } from "./lib/allTests";
+import type { TestResult, TestSession, TestConfig } from "@shared/schema";
 
 function generateUUID(): string {
   return crypto.getRandomValues(new Uint8Array(16))
@@ -20,19 +20,46 @@ function generateUUID(): string {
     .join("");
 }
 
-type AppState = "landing" | "test" | "results";
+type AppState = "landing" | "test" | "results" | "error";
 
 function AssessmentApp() {
   const [appState, setAppState] = useState<AppState>("landing");
   const [session, setSession] = useState<TestSession | null>(null);
   const [result, setResult] = useState<TestResult | null>(null);
+  const [testConfig, setTestConfig] = useState<TestConfig | null>(null);
+  const [errorMessage, setErrorMessage] = useState<string>("");
   const { toast } = useToast();
 
+  // Get test from URL parameter on mount
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const testName = params.get("test");
+    
+    if (testName) {
+      const test = getTestByName(testName);
+      if (test) {
+        setTestConfig(test);
+      } else {
+        setErrorMessage(`Test "${testName}" not found.`);
+        setAppState("error");
+      }
+    }
+  }, []);
+
   const handleStartTest = () => {
+    if (!testConfig) {
+      toast({
+        title: "Error",
+        description: "Test not selected.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     const sessionId = generateUUID();
     const newSession: TestSession = {
       id: sessionId,
-      testConfigId: testData.id,
+      testConfigId: testConfig.id,
       startedAt: new Date().toISOString(),
       answers: {},
       status: "in_progress",
@@ -42,7 +69,7 @@ function AssessmentApp() {
   };
 
   const handleSubmitTest = (answers: Record<string, number>, timedOut: boolean) => {
-    if (!session) {
+    if (!session || !testConfig) {
       toast({
         title: "Error",
         description: "Session not found. Please restart the test.",
@@ -51,9 +78,8 @@ function AssessmentApp() {
       return;
     }
 
-    // Calcular resultado
     let correctAnswers = 0;
-    const answerDetails = testData.questions.map((question) => {
+    const answerDetails = testConfig.questions.map((question) => {
       const selectedOptionIndex = answers[question.id.toString()];
       const isCorrect = selectedOptionIndex === question.correctOptionIndex;
       if (isCorrect) correctAnswers++;
@@ -66,10 +92,10 @@ function AssessmentApp() {
       };
     });
 
-    const score = Math.round((correctAnswers / testData.questions.length) * 100);
+    const score = Math.round((correctAnswers / testConfig.questions.length) * 100);
     const testResult: TestResult = {
       sessionId: session.id,
-      totalQuestions: testData.questions.length,
+      totalQuestions: testConfig.questions.length,
       correctAnswers,
       score,
       answers: answerDetails,
@@ -94,19 +120,31 @@ function AssessmentApp() {
     setAppState("landing");
   }
 
-  if (appState === "landing") {
+  if (appState === "error") {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-background">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-foreground mb-4">Error</h1>
+          <p className="text-muted-foreground mb-6">{errorMessage}</p>
+          <a href="/" className="text-primary hover:underline">Return to home</a>
+        </div>
+      </div>
+    );
+  }
+
+  if (appState === "landing" && testConfig) {
     return (
       <LandingPage 
-        testConfig={testData} 
+        testConfig={testConfig} 
         onStartTest={handleStartTest}
       />
     );
   }
 
-  if (appState === "test" && session) {
+  if (appState === "test" && session && testConfig) {
     return (
       <TestPage
-        testConfig={testData}
+        testConfig={testConfig}
         sessionId={session.id}
         startTime={new Date(session.startedAt).getTime()}
         onSubmit={handleSubmitTest}
@@ -114,11 +152,11 @@ function AssessmentApp() {
     );
   }
 
-  if (appState === "results" && result) {
+  if (appState === "results" && result && testConfig) {
     return (
       <ResultsPage
         result={result}
-        testConfig={testData}
+        testConfig={testConfig}
         onRetake={handleRetake}
       />
     );
