@@ -3,8 +3,8 @@ import type { TestConfig } from "@shared/schema";
 export const testData: TestConfig = {
   id: "default-test",
   title: "Composite Materials",
-  description: "Avaliação sobre Composite Materials e materiais estruturais em aviação. Responda todas as 57 questões sobre compostos, resinas, fibras, estruturas de madeira, propriedades de materiais e tratamentos térmicos. Tempo limite: 45 minutos.",
-  durationMinutes: 45,
+  description: "Avaliação sobre Composite Materials e materiais estruturais em aviação. Responda todas as 57 questões sobre compostos, resinas, fibras, estruturas de madeira, propriedades de materiais e tratamentos térmicos. Tempo limite: 60 minutos.",
+  durationMinutes: 60,
   questions: [
     {
       id: 1,
