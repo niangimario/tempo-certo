@@ -1,4 +1,4 @@
-import type { TestConfig } from "@shared/schema";
+eximport type { TestConfig } from "@shared/schema";
 
 export const allTests: Record<string, TestConfig> = {
   "composite-materials": {
@@ -635,6 +635,256 @@ export const allTests: Record<string, TestConfig> = {
 export const getTestByName = (testName: string | null): TestConfig | null => {
   if (!testName) return null;
   return allTests[testName] || null;
+};
+
+  "ferrous-non-ferrous-metals": {
+    id: "ferrous-non-ferrous-metals",
+    title: "Ferrous and Non-Ferrous Metals",
+    description: "Assessment on Ferrous and Non-Ferrous Metals in aviation, including aluminum, magnesium, titanium, nickel, copper alloys and heat treatment processes. Answer all 40 questions about metal properties, heat treatment, and aerospace applications. Time limit: 40 minutes.",
+    durationMinutes: 40,
+    questions: [
+      {
+        id: 1,
+        text: "What is the primary reason aluminum alloys are extensively used in aircraft construction?",
+        options: ["High magnetic properties", "Excellent strength-to-weight ratio and corrosion resistance", "Superior electrical insulation"],
+        correctOptionIndex: 1,
+      },
+      {
+        id: 2,
+        text: "Which aluminum alloy series uses copper as its major alloying element and is commonly used for aircraft skins and structures?",
+        options: ["5xxx series", "2xxx series", "3xxx series"],
+        correctOptionIndex: 1,
+      },
+      {
+        id: 3,
+        text: "What does the temper designation \"-T6\" indicate for an aluminum alloy?",
+        options: ["Annealed condition", "Solution heat-treated and artificially aged", "Strain-hardened only"],
+        correctOptionIndex: 1,
+      },
+      {
+        id: 4,
+        text: "Which aluminum alloys are generally non-heat-treatable?",
+        options: ["2xxx, 6xxx, 7xxx", "1xxx, 3xxx, 5xxx", "8xxx, 4xxx, 9xxx"],
+        correctOptionIndex: 1,
+      },
+      {
+        id: 5,
+        text: "What is the purpose of cladding aluminum alloy sheets with pure aluminum?",
+        options: ["To increase electrical conductivity", "To improve corrosion resistance", "To enhance magnetic properties"],
+        correctOptionIndex: 1,
+      },
+      {
+        id: 6,
+        text: "What is the maximum recommended number of heat treatments for clad aluminum materials?",
+        options: ["One", "Three", "Five"],
+        correctOptionIndex: 1,
+      },
+      {
+        id: 7,
+        text: "What is a significant hazard when machining magnesium?",
+        options: ["It becomes brittle at low temperatures", "It is highly flammable, especially as fine dust or swarf", "It emits toxic fumes when annealed"],
+        correctOptionIndex: 1,
+      },
+      {
+        id: 8,
+        text: "Which element is the primary alloying agent in the 5xxx series aluminum alloys?",
+        options: ["Silicon", "Magnesium", "Zinc"],
+        correctOptionIndex: 1,
+      },
+      {
+        id: 9,
+        text: "What does the alloy designation \"AZ31A-T4\" indicate for a magnesium alloy?",
+        options: ["Contains 3% aluminum and 1% zinc, solution heat-treated", "Contains 31% aluminum, annealed", "Contains aluminum and zirconium, strain-hardened"],
+        correctOptionIndex: 0,
+      },
+      {
+        id: 10,
+        text: "What is a key advantage of titanium alloys in aerospace applications?",
+        options: ["Low cost and high availability", "High strength-to-weight ratio and excellent corrosion resistance", "High thermal and electrical conductivity"],
+        correctOptionIndex: 1,
+      },
+      {
+        id: 11,
+        text: "Which of the following should NOT be used with titanium components due to risk of embrittlement?",
+        options: ["Cadmium-coated fasteners", "Stainless steel fasteners", "Aluminum rivets"],
+        correctOptionIndex: 0,
+      },
+      {
+        id: 12,
+        text: "What is a correct method for extinguishing a titanium fire?",
+        options: ["Water or foam", "Dry asbestos wool and chalk powder", "Carbon dioxide (CO₂)"],
+        correctOptionIndex: 1,
+      },
+      {
+        id: 13,
+        text: "Which nickel alloy is known for its use in gas turbine blades and high-temperature applications?",
+        options: ["Monel", "Nimonic", "Brass"],
+        correctOptionIndex: 1,
+      },
+      {
+        id: 14,
+        text: "What is a primary characteristic of Inconel alloys?",
+        options: ["High electrical conductivity", "Excellent heat and corrosion resistance", "Lightweight and low density"],
+        correctOptionIndex: 1,
+      },
+      {
+        id: 15,
+        text: "Which alloy is a nickel-copper combination often used for corrosion-resistant rivets?",
+        options: ["Hastelloy", "K-Monel", "Incoloy"],
+        correctOptionIndex: 1,
+      },
+      {
+        id: 16,
+        text: "What is a common use of beryllium bronze in aircraft?",
+        options: ["Electrical wiring", "High-strength bearings and bushings", "Fuel lines"],
+        correctOptionIndex: 1,
+      },
+      {
+        id: 17,
+        text: "Why is Tungum alloy no longer used in aircraft hydraulic systems?",
+        options: ["It is too heavy", "It becomes brittle over time", "It corrodes easily"],
+        correctOptionIndex: 1,
+      },
+      {
+        id: 18,
+        text: "What is the greenish layer that forms on copper called?",
+        options: ["Rust", "Verdigris", "Galvanic coating"],
+        correctOptionIndex: 1,
+      },
+      {
+        id: 19,
+        text: "Why is depleted uranium (DU) handled with special precautions?",
+        options: ["It is highly flammable", "It is toxic both chemically and radiologically", "It corrodes rapidly in air"],
+        correctOptionIndex: 1,
+      },
+      {
+        id: 20,
+        text: "What is a primary use of cadmium in aviation?",
+        options: ["As a balance weight material", "As a protective coating on steel fasteners", "As a high-temperature alloy in engines"],
+        correctOptionIndex: 1,
+      },
+      {
+        id: 21,
+        text: "According to the certification table, which license category has NO knowledge level requirement for testing ferrous materials for hardness, tensile strength, fatigue strength, and impact resistance?",
+        options: ["A", "B1/B3", "B2/B2L"],
+        correctOptionIndex: 0,
+      },
+      {
+        id: 22,
+        text: "In the stress-strain diagram, what does the \"necking\" region indicate?",
+        options: ["The point where the material returns to its original length upon unloading.", "The onset of plastic deformation where strain increases without an increase in stress.", "The point where uniform plastic extension ends and localized deformation begins before fracture."],
+        correctOptionIndex: 2,
+      },
+      {
+        id: 23,
+        text: "Which of the following statements about the microstructure of steel is FALSE?",
+        options: ["Ferrite contains no more than 0.006% carbon and is soft and ductile.", "Cementite contains 6.67% carbon and is hard and brittle.", "Pearlite is a laminated structure of ferrite and austenite."],
+        correctOptionIndex: 2,
+      },
+      {
+        id: 24,
+        text: "If a steel component is heated to 950°C and then quenched in oil, what is the most likely resulting microstructure if it contains 0.8% carbon?",
+        options: ["Martensite", "Pearlite", "Austenite"],
+        correctOptionIndex: 0,
+      },
+      {
+        id: 25,
+        text: "Which alloying element combination is primarily used to achieve \"austenitic\" stainless steel with non-magnetic properties?",
+        options: ["18% Chromium, 8% Nickel", "12% Chromium, 0.5% Carbon", "15% Chromium, 5% Nickel"],
+        correctOptionIndex: 0,
+      },
+      {
+        id: 26,
+        text: "Based on the table of alloying element effects, which element DECREASES machinability?",
+        options: ["Chromium", "Molybdenum", "Nickel"],
+        correctOptionIndex: 0,
+      },
+      {
+        id: 27,
+        text: "In the context of fatigue, what is represented by the \"ground-air-ground\" cycle?",
+        options: ["The stress fluctuation during a single flight from takeoff to landing.", "The repeated pressurization and depressurization of the cabin.", "The transition from ground handling to in-flight maneuvering and back."],
+        correctOptionIndex: 2,
+      },
+      {
+        id: 28,
+        text: "Which heat treatment process would you use to restore the crystalline structure of a cold-worked steel part that has become brittle, without making it as soft as fully annealed material?",
+        options: ["Tempering", "Normalizing", "Case Hardening"],
+        correctOptionIndex: 1,
+      },
+      {
+        id: 29,
+        text: "According to the phase-equilibrium diagram for iron-carbon, what is the approximate lower critical temperature (A1) for steel?",
+        options: ["723°C", "950°C", "1,200°C"],
+        correctOptionIndex: 0,
+      },
+      {
+        id: 30,
+        text: "Which of the following statements about 9Ni-4Co-0.30C steel is FALSE?",
+        options: ["It is used for elevated temperature applications up to 900°F.", "It is a precipitation-hardened stainless steel.", "It is heat treated to 220-240 KSI."],
+        correctOptionIndex: 1,
+      },
+      {
+        id: 31,
+        text: "In the cyanide hardening process, why is sodium cyanide considered dangerous?",
+        options: ["It releases toxic fumes when heated.", "It is highly poisonous and requires strict safety precautions.", "It is highly corrosive to steel."],
+        correctOptionIndex: 1,
+      },
+      {
+        id: 32,
+        text: "What is the primary advantage of nitriding over carburizing for case hardening?",
+        options: ["It produces a thicker hardened case.", "It operates at a lower temperature, reducing distortion.", "It is faster and cheaper."],
+        correctOptionIndex: 1,
+      },
+      {
+        id: 33,
+        text: "Which steel would be LEAST suitable for a highly stressed aircraft fitting requiring both high strength and good corrosion resistance?",
+        options: ["15-5PH", "4340M", "304 Stainless"],
+        correctOptionIndex: 2,
+      },
+      {
+        id: 34,
+        text: "If a steel has an AISI/SAE designation of 52100, what is its primary alloying element and approximate carbon content?",
+        options: ["Chromium, 1.00% carbon", "Molybdenum, 0.30% carbon", "Nickel, 1.00% carbon"],
+        correctOptionIndex: 0,
+      },
+      {
+        id: 35,
+        text: "In the context of creep, what does the \"steady-state creep\" phase indicate?",
+        options: ["The initial elastic deformation under load.", "A constant rate of deformation over time.", "The final rapid deformation leading to rupture."],
+        correctOptionIndex: 1,
+      },
+      {
+        id: 36,
+        text: "What is the primary reason for using vacuum remelt steels (like 4330M and 4340M) in critical aircraft components?",
+        options: ["To improve magnetic properties.", "To enhance purity and mechanical properties (ductility, fatigue resistance).", "To reduce weight."],
+        correctOptionIndex: 1,
+      },
+      {
+        id: 37,
+        text: "According to the module, which of the following is NOT a typical application for 17-4PH stainless steel?",
+        options: ["Control levers and fittings", "Landing gear legs", "Cast housings"],
+        correctOptionIndex: 1,
+      },
+      {
+        id: 38,
+        text: "Which property is NOT typically associated with martensitic stainless steels?",
+        options: ["Magnetic", "Hardenable by heat treatment", "Non-responsive to heat treatment"],
+        correctOptionIndex: 2,
+      },
+      {
+        id: 39,
+        text: "In flame hardening, why is the quenching water jet integrated into the torch assembly?",
+        options: ["To cool the torch and prevent overheating.", "To immediately quench the heated surface before the core temperature rises.", "To provide a protective steam layer."],
+        correctOptionIndex: 1,
+      },
+      {
+        id: 40,
+        text: "What does the \"T\" in the tempering colour chart (e.g., \"Straw\" at 430°F) indicate?",
+        options: ["The temperature at which the steel should be quenched.", "The colour the steel surface oxidizes to at that temperature, used for temperature estimation.", "The colour of the steel after quenching."],
+        correctOptionIndex: 1,
+      },
+    ],
+  },
 };
 
 export const getAvailableTests = () => {
