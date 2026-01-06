@@ -630,13 +630,6 @@ export const allTests: Record<string, TestConfig> = {
       },
     ],
   },
-};
-
-export const getTestByName = (testName: string | null): TestConfig | null => {
-  if (!testName) return null;
-  return allTests[testName] || null;
-};
-
   "ferrous-non-ferrous-metals": {
     id: "ferrous-non-ferrous-metals",
     title: "Ferrous and Non-Ferrous Metals",
@@ -885,6 +878,11 @@ export const getTestByName = (testName: string | null): TestConfig | null => {
       },
     ],
   },
+};
+
+export const getTestByName = (testName: string | null): TestConfig | null => {
+  if (!testName) return null;
+  return allTests[testName] || null;
 };
 
 export const getAvailableTests = () => {
