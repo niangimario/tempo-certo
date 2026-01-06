@@ -1,4 +1,4 @@
-eximport type { TestConfig } from "@shared/schema";
+import type { TestConfig } from "@shared/schema";
 
 export const allTests: Record<string, TestConfig> = {
   "composite-materials": {
