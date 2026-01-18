@@ -1147,8 +1147,8 @@ export const allTests: Record<string, TestConfig> = {
   "aircraft-materials-hardware": {
     id: "aircraft-materials-hardware",
     title: "Aircraft Materials & Hardware",
-    description: "Comprehensive assessment on aircraft materials and hardware including steel alloys, non-ferrous metals, composites, fasteners, corrosion prevention, and material properties. Answer all 101 questions about steel classification, aluminum alloys, titanium, composites, fasteners, and galvanic corrosion. Time limit: 120 minutes.",
-    durationMinutes: 120,
+    description: "Comprehensive assessment on aircraft materials and hardware including steel alloys, non-ferrous metals, composites, fasteners, corrosion prevention, and material properties. Answer all 101 questions about steel classification, aluminum alloys, titanium, composites, fasteners, and galvanic corrosion. Time limit: 60 minutes.",
+    durationMinutes: 60,
     questions: [
       { id: 1, text: "What is the primary reason for alloying steel with elements like chromium, nickel, and molybdenum?", options: ["To reduce weight", "To change properties like toughness, hardness, and corrosion resistance", "To make it easier to weld"], correctOptionIndex: 1 },
       { id: 2, text: "What percentage of chromium must a steel contain to be considered corrosion-resistant (stainless) steel?", options: ["Above 5%", "Above 11%", "Above 20%"], correctOptionIndex: 1 },
