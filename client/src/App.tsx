@@ -9,15 +9,17 @@ import { getTestByName } from "./lib/allTests";
 import type { TestResult, TestSession, TestConfig } from "@shared/schema";
 
 function generateUUID(): string {
-  return crypto.getRandomValues(new Uint8Array(16))
-    .map((n, i) => {
-      if (i === 6) n = (n & 0x0f) | 0x40;
-      if (i === 8) n = (n & 0x3f) | 0x80;
-      const hex = n.toString(16).padStart(2, "0");
-      if (i === 3 || i === 5 || i === 7 || i === 9) return `-${hex}`;
-      return hex;
-    })
-    .join("");
+  const bytes = crypto.getRandomValues(new Uint8Array(16));
+  const hex: string[] = [];
+  for (let i = 0; i < bytes.length; i++) {
+    let n = bytes[i];
+    if (i === 6) n = (n & 0x0f) | 0x40;
+    if (i === 8) n = (n & 0x3f) | 0x80;
+    const h = n.toString(16).padStart(2, "0");
+    if (i === 3 || i === 5 || i === 7 || i === 9) hex.push(`-${h}`);
+    else hex.push(h);
+  }
+  return hex.join("");
 }
 
 type AppState = "landing" | "test" | "results" | "error";

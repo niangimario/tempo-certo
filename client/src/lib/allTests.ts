@@ -1272,11 +1272,6 @@ export const allTests: Record<string, TestConfig> = {
       { id: 120, text: "When installing a castellated nut and cotter pin, the correct procedure is to:", options: ["Tighten the nut to the required torque, then if necessary tighten further to align the nearest slot with the bolt hole.", "Tighten the nut until finger-tight, then insert the cotter pin.", "Never tighten beyond the specified torque to align the slot."], correctOptionIndex: 0 },
     ],
   },
-};
-
-export const getTestByName = (testName: string | null): TestConfig | null => {
-  if (!testName) return null;
-  return allTests[testName] || null;
   "aviation-safety-technical": {
     id: "aviation-safety-technical",
     title: "Aviation Safety & Technical Procedures",
@@ -1705,6 +1700,11 @@ export const getTestByName = (testName: string | null): TestConfig | null => {
       },
     ],
   },
+};
+
+export const getTestByName = (testName: string | null): TestConfig | null => {
+  if (!testName) return null;
+  return allTests[testName] || null;
 };
 
 export const getAvailableTests = () => {
