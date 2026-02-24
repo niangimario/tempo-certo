@@ -2020,8 +2020,8 @@ export const allTests: Record<string, TestConfig> = {
   "theory-of-flight": {
     id: "theory-of-flight",
     title: "Theory of Flight - 100 Multiple Choice Questions",
-    description: "Comprehensive assessment on aircraft axes, control surfaces, flight dynamics, and aerodynamic principles. Answer 100 questions covering flight controls, empennage configurations, high-lift devices, and boundary layer control. Time limit: 90 minutes.",
-    durationMinutes: 90,
+    description: "Comprehensive assessment on aircraft axes, control surfaces, flight dynamics, and aerodynamic principles. Answer 100 questions covering flight controls, empennage configurations, high-lift devices, and boundary layer control. Time limit: 60 minutes.",
+    durationMinutes: 60,
     questions: [
       { id: 1, text: "What are the three axes about which an aircraft can rotate?", options: ["Horizontal, vertical, diagonal", "Longitudinal, lateral, normal (vertical)", "Pitch, roll, directional"], correctOptionIndex: 1 },
       { id: 2, text: "The longitudinal axis runs from:", options: ["Wing tip to wing tip", "Nose to tail", "Top to bottom"], correctOptionIndex: 1 },
