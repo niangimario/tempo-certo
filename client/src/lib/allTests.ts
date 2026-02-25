@@ -2019,8 +2019,8 @@ export const allTests: Record<string, TestConfig> = {
   },
   "theory-of-flight": {
     id: "theory-of-flight",
-    title: "Theory of Flight - 225 Multiple Choice Questions",
-    description: "Comprehensive assessment on aircraft axes, control surfaces, flight dynamics, and aerodynamic principles. Answer all 225 questions covering flight controls, empennage configurations, high-lift devices, boundary layer control, and more. Time limit: 60 minutes.",
+    title: "Theory of Flight",
+    description: "Comprehensive assessment on aircraft axes, control surfaces, flight dynamics, and aerodynamic principles. Answer all 225 questions covering flight controls, empennage configurations, high-lift devices, boundary layer control, and more.",
     durationMinutes: 60,
     questions: [
       { id: 1, text: "What are the three axes about which an aircraft can rotate?", options: ["Horizontal, vertical, diagonal", "Longitudinal, lateral, normal (vertical)", "Pitch, roll, directional"], correctOptionIndex: 1 },
@@ -2252,7 +2252,7 @@ export const allTests: Record<string, TestConfig> = {
   },
   "airframe-structures-ata-51": {
     id: "airframe-structures-ata-51",
-    title: "Airframe Structures ATA 51 - 225 Multiple Choice Questions",
+    title: "Airframe Structures ATA",
     description: "Comprehensive examination on aircraft structure principles, materials, assembly techniques, and design classifications. Covers zonal identification, bonding, lightning protection, structural loads, and composite materials. Answer all 225 questions in 60 minutes.",
     durationMinutes: 60,
     questions: [
@@ -2485,8 +2485,8 @@ export const allTests: Record<string, TestConfig> = {
   },
   "airframe-structures": {
     id: "airframe-structures",
-    title: "Airframe Structures - Aeroplanes - 225 Multiple Choice Questions",
-    description: "Comprehensive assessment on fuselage construction, structural components, doors, windows, and aircraft systems. Answer all 225 questions covering fuselage types, stringers, joints, fire zones, and more. Time limit: 60 minutes.",
+    title: "Airframe Structures - Aeroplanes",
+    description: "Comprehensive assessment on fuselage construction, structural components, doors, windows, and aircraft systems. Answer all 225 questions covering fuselage types, stringers, joints, fire zones, and more.",
     durationMinutes: 60,
     questions: [
       { id: 1, text: "The fuselage is the body of the aircraft to which all of the following attach EXCEPT:", options: ["Wings and tail", "Passengers only", "Engine and landing gear"], correctOptionIndex: 1 },
@@ -2719,7 +2719,7 @@ export const allTests: Record<string, TestConfig> = {
   "air-conditioning": {
     id: "air-conditioning",
     title: "Air Conditioning and Cabin Pressurisation",
-    description: "Comprehensive assessment on Air Conditioning and Cabin Pressurisation systems. Cover pressurisation fundamentals, air supply systems, cooling principles, temperature control, safety devices, and system components. 200 questions covering all major technical aspects. Time limit: 60 minutes.",
+    description: "Comprehensive assessment on Air Conditioning and Cabin Pressurisation systems. Cover pressurisation fundamentals, air supply systems, cooling principles, temperature control, safety devices, and system components. 200 questions covering all major technical aspects.",
     durationMinutes: 60,
     questions: [
       { id: 1, text: "What is the primary reason for flying an aircraft at high altitude?", options: ["To increase passenger comfort due to smoother air.", "To burn less fuel for a given airspeed, making the aircraft more efficient.", "To reduce the need for cabin pressurisation."], correctOptionIndex: 1 },
@@ -2926,8 +2926,8 @@ export const allTests: Record<string, TestConfig> = {
   },
   "equipment-furnishings": {
     id: "equipment-furnishings",
-    title: "Equipment and Furnishings - 120 Multiple Choice Questions",
-    description: "Comprehensive assessment on Aircraft Equipment and Furnishings. Cover emergency equipment, safety features, furniture, cabin layouts, cargo systems, and airstairs. 120 questions on emergency equipment, seats, galleys, lavatories, and aircraft systems. Time limit: 40 minutes.",
+    title: "Equipment and Furnishings",
+    description: "Comprehensive assessment on Aircraft Equipment and Furnishings. Cover emergency equipment, safety features, furniture, cabin layouts, cargo systems, and airstairs. 120 questions on emergency equipment, seats, galleys, lavatories, and aircraft systems.",
     durationMinutes: 40,
     questions: [
       { id: 1, text: "The types and quantity of each item of emergency equipment are specified in which regulations?", options: ["Only EASA regulations", "National aviation regulations and EU-OPS", "Only ICAO annexes"], correctOptionIndex: 1 },
@@ -3054,8 +3054,8 @@ export const allTests: Record<string, TestConfig> = {
   },
   "fire-protection": {
     id: "fire-protection",
-    title: "Fire Protection (ATA 26) - 132 Multiple Choice Questions",
-    description: "Comprehensive assessment on Aircraft Fire Protection Systems. Cover fire detection systems, smoke detectors, flame detectors, extinguishing agents (water, CO₂, halon, HFC-125), engine fire protection, APU fire protection, cargo compartment fire protection, lavatory fire protection, avionics smoke detection, and portable fire extinguishers. 132 questions on fire detection, suppression agents, and system operation. Time limit: 40 minutes.",
+    title: "Fire Protection",
+    description: "Comprehensive assessment on Aircraft Fire Protection Systems. Cover fire detection systems, smoke detectors, flame detectors, extinguishing agents (water, CO₂, halon, HFC-125), engine fire protection, APU fire protection, cargo compartment fire protection, lavatory fire protection, avionics smoke detection, and portable fire extinguishers. ",
     durationMinutes: 40,
     questions: [
       { id: 1, text: "A complete fire detection system consists of what types of detectors?", options: ["Smoke detectors only", "Fire detectors, overheat detectors, rate-of-temperature-rise detectors, smoke detectors, and carbon monoxide detectors", "Heat detectors only"], correctOptionIndex: 1 },
@@ -3194,8 +3194,8 @@ export const allTests: Record<string, TestConfig> = {
   },
   "flight-controls": {
     id: "flight-controls",
-    title: "Flight Controls (ATA 27) - 231 Multiple Choice Questions",
-    description: "Comprehensive assessment on Aircraft Flight Controls Systems. Cover axes of control, primary and secondary controls, trim systems, cockpit controls, aileron-rudder interconnection, electrical trim, mechanical systems, hydraulic systems, fly-by-wire systems, protection systems, Airbus and Boeing differences, mass balance, control surface rigging, and control system operation. 231 questions across all aspects of flight control systems. Time limit: 60 minutes.",
+    title: "Flight Controls",
+    description: "Comprehensive assessment on Aircraft Flight Controls Systems. Cover axes of control, primary and secondary controls, trim systems, cockpit controls, aileron-rudder interconnection, electrical trim, mechanical systems, hydraulic systems, fly-by-wire systems, protection systems, Airbus and Boeing differences, mass balance, control surface rigging, and control system operation.",
     durationMinutes: 60,
     questions: [
       { id: 1, text: "An aircraft is free to rotate around how many axes that intersect at its centre of gravity?", options: ["Two", "Three", "Four"], correctOptionIndex: 1 },
@@ -3433,8 +3433,8 @@ export const allTests: Record<string, TestConfig> = {
   },
   "fuel-systems": {
     id: "fuel-systems",
-    title: "Fuel Systems (ATA 28, ATA 47) - 288 Multiple Choice Questions",
-    description: "Comprehensive assessment on Aircraft Fuel Systems. Cover general fuel system requirements, design regulations, tank construction, fuel supply systems, pumps, valves, filters, fuel quality, contamination detection, maintenance procedures, refuelling/defuelling operations, fuel quantity indication systems, ultrasonic gauging, fuel System balancing for centre of gravity control, tank inerting, and modern fuel system management. 288 questions on all aspects of aircraft fuel systems. Time limit: 60 minutes.",
+    title: "Fuel Systems",
+    description: "Comprehensive assessment on Aircraft Fuel Systems. Cover general fuel system requirements, design regulations, tank construction, fuel supply systems, pumps, valves, filters, fuel quality, contamination detection, maintenance procedures, refuelling/defuelling operations, fuel quantity indication systems, ultrasonic gauging, fuel System balancing for centre of gravity control, tank inerting, and modern fuel system management.",
     durationMinutes: 60,
     questions: [
       { id: 1, text: "The weight of fuel may range from about what percentage of gross weight for small personal aeroplanes to more than what percentage for some business jets?", options: ["5% to 20%", "10% to 40%", "15% to 50%"], correctOptionIndex: 1 },
