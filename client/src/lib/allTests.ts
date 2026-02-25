@@ -2718,7 +2718,7 @@ export const allTests: Record<string, TestConfig> = {
   },
   "air-conditioning": {
     id: "air-conditioning",
-    title: "Air Conditioning and Cabin Pressurisation - 200 Multiple Choice Questions",
+    title: "Air Conditioning and Cabin Pressurisation",
     description: "Comprehensive assessment on Air Conditioning and Cabin Pressurisation systems. Cover pressurisation fundamentals, air supply systems, cooling principles, temperature control, safety devices, and system components. 200 questions covering all major technical aspects. Time limit: 60 minutes.",
     durationMinutes: 60,
     questions: [
