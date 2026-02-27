@@ -1,4 +1,5 @@
 import type { TestConfig } from "@shared/schema";
+import { instrumentSystemsQuestions } from "./instrumentSystemsQuestions";
 
 export const allTests: Record<string, TestConfig> = {
   "composite-materials": {
@@ -4547,6 +4548,13 @@ export const allTests: Record<string, TestConfig> = {
       { id: 443, text: "After normal functioning test, what should be done to check isolation?", options: ["Leave circuit on", "Remove fuse or trip circuit breaker and switch circuit on again", "Disconnect battery"], correctOptionIndex: 1 },
       { id: 444, text: "When circuit operation depends on inherent resistance value, what should be used?", options: ["Standard multimeter", "Low reading ohm-meter (like bonding tester)", "Megger"], correctOptionIndex: 1 },
     ],
+  },
+  "instrument-systems": {
+    id: "instrument-systems",
+    title: "Instrument Systems",
+    description: "Comprehensive assessment on Aircraft Instrument Systems (ATA 31). Topics include pitot-static systems, altimeters, vertical speed indicators, airspeed indicators, Mach meters, gyroscopic instruments, attitude indicators, heading indicators, flight management systems, and ground proximity warning systems. 439 questions, 120 minutes.",
+    durationMinutes: 120,
+    questions: instrumentSystemsQuestions,
   },
 };
 
