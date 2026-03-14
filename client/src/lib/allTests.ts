@@ -4,6 +4,7 @@ import { icaoEasaRegulationsQuestions } from "./icaoEasaRegulationsQuestions";
 import { easaModule102CertifyingStaffQuestions } from "./easaModule102CertifyingStaffQuestions";
 import { part145MaintenanceOrganisationQuestions } from "./part145MaintenanceOrganisationQuestions";
 import { atomicStructureChemistryQuestions } from "./atomicStructureChemistryQuestions";
+import { physicsStressStrainQuestions } from "./physicsStressStrainQuestions";
 
 export const allTests: Record<string, TestConfig> = {
   "composite-materials": {
@@ -4587,6 +4588,13 @@ export const allTests: Record<string, TestConfig> = {
     description: "Comprehensive assessment on atomic structure and fundamental chemistry concepts. Topics include atomic particles and structure, Dalton's atomic theory, periodic table organization, elements and compounds, molecules and chemical formulas, chemical reactions, atomic and mass numbers, atomic mass units, isotopes, electron shells and subshells, ionization, valency, conductors and semiconductors, chemical bonding (covalent, ionic, metallic), states of matter, Brownian motion, thermal expansion, and acids and alkalis. 150 questions, 200 minutes.",
     durationMinutes: 200,
     questions: atomicStructureChemistryQuestions,
+  },
+  "physics-stress-strain": {
+    id: "physics-stress-strain",
+    title: "Mass, Force and Weight",
+    description: "Comprehensive assessment on mass, force, weight, moments, couples, torque, centre of gravity, aircraft weighing methods, vectors, stress, strain, elasticity, materials behaviour, shear forces, bending moments, solids/liquids/gases, changes of state, pressure, atmospheric pressure, barometers, Pascal's law, hydraulic principles, buoyancy and Archimedes' principle. Topics include SI and imperial units, vector components, relative velocity, structural stresses, material properties, and fluid mechanics. 183 questions, 200 minutes.",
+    durationMinutes: 200,
+    questions: physicsStressStrainQuestions,
   },
 };
 
