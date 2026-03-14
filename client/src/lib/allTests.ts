@@ -3,6 +3,7 @@ import { instrumentSystemsQuestions } from "./instrumentSystemsQuestions";
 import { icaoEasaRegulationsQuestions } from "./icaoEasaRegulationsQuestions";
 import { easaModule102CertifyingStaffQuestions } from "./easaModule102CertifyingStaffQuestions";
 import { part145MaintenanceOrganisationQuestions } from "./part145MaintenanceOrganisationQuestions";
+import { atomicStructureChemistryQuestions } from "./atomicStructureChemistryQuestions";
 
 export const allTests: Record<string, TestConfig> = {
   "composite-materials": {
@@ -4579,6 +4580,13 @@ export const allTests: Record<string, TestConfig> = {
     description: "Comprehensive assessment on EASA Part-145 regulations covering maintenance organization approval and operations. Topics include Part-145 overview, Part-CAO, competent authority requirements, maintenance definitions, aircraft classifications, line and base maintenance, facility and personnel requirements, certifying and support staff, equipment and tools, component handling, maintenance data, work planning, performance of maintenance, certification of maintenance, record keeping, occurrence reporting, quality system, management structure, Safety Management System (SMS), findings and compliance, class ratings, and Part-CAO specific requirements. 160 questions, 200 minutes.",
     durationMinutes: 200,
     questions: part145MaintenanceOrganisationQuestions,
+  },
+  "atomic-structure-chemistry": {
+    id: "atomic-structure-chemistry",
+    title: "Atomic Structure & Chemistry",
+    description: "Comprehensive assessment on atomic structure and fundamental chemistry concepts. Topics include atomic particles and structure, Dalton's atomic theory, periodic table organization, elements and compounds, molecules and chemical formulas, chemical reactions, atomic and mass numbers, atomic mass units, isotopes, electron shells and subshells, ionization, valency, conductors and semiconductors, chemical bonding (covalent, ionic, metallic), states of matter, Brownian motion, thermal expansion, and acids and alkalis. 150 questions, 200 minutes.",
+    durationMinutes: 200,
+    questions: atomicStructureChemistryQuestions,
   },
 };
 
