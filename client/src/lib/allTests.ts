@@ -1,6 +1,7 @@
 import type { TestConfig } from "@shared/schema";
 import { instrumentSystemsQuestions } from "./instrumentSystemsQuestions";
 import { icaoEasaRegulationsQuestions } from "./icaoEasaRegulationsQuestions";
+import { easaModule102CertifyingStaffQuestions } from "./easaModule102CertifyingStaffQuestions";
 
 export const allTests: Record<string, TestConfig> = {
   "composite-materials": {
@@ -4563,6 +4564,13 @@ export const allTests: Record<string, TestConfig> = {
     description: "Comprehensive assessment on The International Civil Aviation Organization (ICAO) and European Aviation Safety Agency (EASA) regulations. Topics include ICAO structure, Chicago Convention, ICAO Standards and SARPs, Safety Management Systems, European Union institutions, EASA jurisdiction, certification specifications, continuing airworthiness, air crew licensing, and occurrence reporting. 130 questions, 200 minutes.",
     durationMinutes: 200,
     questions: icaoEasaRegulationsQuestions,
+  },
+  "easa-module-10-2": {
+    id: "easa-module-10-2",
+    title: "EASA Module 10.2 Certifying Staff - Maintenance",
+    description: "Comprehensive assessment on EASA Module 10.2 covering Part-66 certifying staff requirements. Topics include Part-66 overview, terminology and definitions, aircraft classifications (ELA, LSA, CMPA), line and base maintenance, licence categories and privileges, experience requirements, type ratings, examination structure, and supporting regulations. 150 questions, 200 minutes.",
+    durationMinutes: 200,
+    questions: easaModule102CertifyingStaffQuestions,
   },
 };
 
