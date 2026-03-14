@@ -1,5 +1,6 @@
 import type { TestConfig } from "@shared/schema";
 import { instrumentSystemsQuestions } from "./instrumentSystemsQuestions";
+import { icaoEasaRegulationsQuestions } from "./icaoEasaRegulationsQuestions";
 
 export const allTests: Record<string, TestConfig> = {
   "composite-materials": {
@@ -4555,6 +4556,13 @@ export const allTests: Record<string, TestConfig> = {
     description: "Comprehensive assessment on Aircraft Instrument Systems (ATA 31). Topics include pitot-static systems, altimeters, vertical speed indicators, airspeed indicators, Mach meters, gyroscopic instruments, attitude indicators, heading indicators, flight management systems, and ground proximity warning systems. 439 questions, 120 minutes.",
     durationMinutes: 120,
     questions: instrumentSystemsQuestions,
+  },
+  "icao-easa-regulations": {
+    id: "icao-easa-regulations",
+    title: "ICAO and EASA Regulations",
+    description: "Comprehensive assessment on The International Civil Aviation Organization (ICAO) and European Aviation Safety Agency (EASA) regulations. Topics include ICAO structure, Chicago Convention, ICAO Standards and SARPs, Safety Management Systems, European Union institutions, EASA jurisdiction, certification specifications, continuing airworthiness, air crew licensing, and occurrence reporting. 130 questions, 200 minutes.",
+    durationMinutes: 200,
+    questions: icaoEasaRegulationsQuestions,
   },
 };
 
