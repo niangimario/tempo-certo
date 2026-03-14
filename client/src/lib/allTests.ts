@@ -2,6 +2,7 @@ import type { TestConfig } from "@shared/schema";
 import { instrumentSystemsQuestions } from "./instrumentSystemsQuestions";
 import { icaoEasaRegulationsQuestions } from "./icaoEasaRegulationsQuestions";
 import { easaModule102CertifyingStaffQuestions } from "./easaModule102CertifyingStaffQuestions";
+import { part145MaintenanceOrganisationQuestions } from "./part145MaintenanceOrganisationQuestions";
 
 export const allTests: Record<string, TestConfig> = {
   "composite-materials": {
@@ -4571,6 +4572,13 @@ export const allTests: Record<string, TestConfig> = {
     description: "Comprehensive assessment on EASA Module 10.2 covering Part-66 certifying staff requirements. Topics include Part-66 overview, terminology and definitions, aircraft classifications (ELA, LSA, CMPA), line and base maintenance, licence categories and privileges, experience requirements, type ratings, examination structure, and supporting regulations. 150 questions, 200 minutes.",
     durationMinutes: 200,
     questions: easaModule102CertifyingStaffQuestions,
+  },
+  "part-145-maintenance": {
+    id: "part-145-maintenance",
+    title: "Part-145 Maintenance Organisation",
+    description: "Comprehensive assessment on EASA Part-145 regulations covering maintenance organization approval and operations. Topics include Part-145 overview, Part-CAO, competent authority requirements, maintenance definitions, aircraft classifications, line and base maintenance, facility and personnel requirements, certifying and support staff, equipment and tools, component handling, maintenance data, work planning, performance of maintenance, certification of maintenance, record keeping, occurrence reporting, quality system, management structure, Safety Management System (SMS), findings and compliance, class ratings, and Part-CAO specific requirements. 160 questions, 200 minutes.",
+    durationMinutes: 200,
+    questions: part145MaintenanceOrganisationQuestions,
   },
 };
 
