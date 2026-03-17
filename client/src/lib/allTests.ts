@@ -6,6 +6,7 @@ import { part145MaintenanceOrganisationQuestions } from "./part145MaintenanceOrg
 import { atomicStructureChemistryQuestions } from "./atomicStructureChemistryQuestions";
 import { physicsStressStrainQuestions } from "./physicsStressStrainQuestions";
 import { kinematicsGearTrainsQuestions } from "./kinematicsGearTrainsQuestions";
+import { euRegulation965Questions } from "./euRegulation965Questions";
 
 export const allTests: Record<string, TestConfig> = {
   "composite-materials": {
@@ -4603,6 +4604,13 @@ export const allTests: Record<string, TestConfig> = {
     description: "Comprehensive assessment on kinematics, motion, rotational dynamics, periodic motion, vibration, simple machines, and gear trains. Topics include linear motion equations, motion under gravity, rotational movement with angular displacement and velocity, centrifugal and centripetal forces, simple harmonic motion, pendula, free and forced vibration, resonance, mechanical advantage, efficiency, levers, pulleys, inclined planes, screw jacks, hydraulic systems, simple gear trains, worm gears, and epicyclic gears. Applications include aircraft flutter, propeller systems, and turboprop engines. 155 questions, 200 minutes.",
     durationMinutes: 200,
     questions: kinematicsGearTrainsQuestions,
+  },
+  "eu-regulation-965-2012": {
+    id: "eu-regulation-965-2012",
+    title: "Regulation (EU) No 965/2012 - General",
+    description: "Comprehensive assessment on Regulation (EU) No 965/2012 (Air Operations Regulation/IR-OPS) covering definitions and classifications of air operations, organisational requirements for air operators, Air Operator Certificates, commercial air transport operations, specific approvals including RVSM and ETOPS, low visibility operations, performance-based navigation, minimum equipment lists, technical crew requirements, operational procedures, continuing airworthiness, and non-commercial operations. Topics span Part-ORO, Part-CAT, Part-SPA, Part-NCC, Part-NCO, and Part-SPO requirements. 132 questions, 200 minutes.",
+    durationMinutes: 200,
+    questions: euRegulation965Questions,
   },
 };
 
