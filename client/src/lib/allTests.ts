@@ -7,6 +7,7 @@ import { atomicStructureChemistryQuestions } from "./atomicStructureChemistryQue
 import { physicsStressStrainQuestions } from "./physicsStressStrainQuestions";
 import { kinematicsGearTrainsQuestions } from "./kinematicsGearTrainsQuestions";
 import { euRegulation965Questions } from "./euRegulation965Questions";
+import { euRegulation748Part21Questions } from "./euRegulation748Part21Questions";
 
 export const allTests: Record<string, TestConfig> = {
   "composite-materials": {
@@ -4611,6 +4612,13 @@ export const allTests: Record<string, TestConfig> = {
     description: "Comprehensive assessment on Regulation (EU) No 965/2012 (Air Operations Regulation/IR-OPS) covering definitions and classifications of air operations, organisational requirements for air operators, Air Operator Certificates, commercial air transport operations, specific approvals including RVSM and ETOPS, low visibility operations, performance-based navigation, minimum equipment lists, technical crew requirements, operational procedures, continuing airworthiness, and non-commercial operations. Topics span Part-ORO, Part-CAT, Part-SPA, Part-NCC, Part-NCO, and Part-SPO requirements. 132 questions, 200 minutes.",
     durationMinutes: 200,
     questions: euRegulation965Questions,
+  },
+  "eu-regulation-748-part-21": {
+    id: "eu-regulation-748-part-21",
+    title: "Regulation (EU) No 748/2012 and Part-21 Overview",
+    description: "Comprehensive assessment on Commission Regulation (EU) No 748/2012 and Part-21 (Aircraft Certification). Covers the structure and organization of Part-21, including Section A (Requirements for Applicants) and Section B (Procedures for Competent Authorities) across 17 subparts (A-Q). Topics include Type Certificates and type design, changes to type certificates (minor and major), Supplemental Type Certificates, production without POA, Production Organisation Approval, Airworthiness Certificates, noise certification, Design Organisation Approval, parts and appliances, repairs, European Technical Standard Order authorizations, Permits to Fly, identification of products, Certification Specifications (CS-22, 23, 25, 27, 29), standard changes and standard repairs (CS-STAN), critical parts, and the overall aircraft certification process. 135 questions, 200 minutes.",
+    durationMinutes: 200,
+    questions: euRegulation748Part21Questions,
   },
 };
 
