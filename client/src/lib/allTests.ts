@@ -8,6 +8,7 @@ import { physicsStressStrainQuestions } from "./physicsStressStrainQuestions";
 import { kinematicsGearTrainsQuestions } from "./kinematicsGearTrainsQuestions";
 import { euRegulation965Questions } from "./euRegulation965Questions";
 import { euRegulation748Part21Questions } from "./euRegulation748Part21Questions";
+import { part21OverviewGeneralProvisionsQuestions } from "./part21OverviewGeneralProvisionsQuestions";
 
 export const allTests: Record<string, TestConfig> = {
   "composite-materials": {
@@ -4619,6 +4620,13 @@ export const allTests: Record<string, TestConfig> = {
     description: "Comprehensive assessment on Commission Regulation (EU) No 748/2012 and Part-21 (Aircraft Certification). Covers the structure and organization of Part-21, including Section A (Requirements for Applicants) and Section B (Procedures for Competent Authorities) across 17 subparts (A-Q). Topics include Type Certificates and type design, changes to type certificates (minor and major), Supplemental Type Certificates, production without POA, Production Organisation Approval, Airworthiness Certificates, noise certification, Design Organisation Approval, parts and appliances, repairs, European Technical Standard Order authorizations, Permits to Fly, identification of products, Certification Specifications (CS-22, 23, 25, 27, 29), standard changes and standard repairs (CS-STAN), critical parts, and the overall aircraft certification process. 135 questions, 200 minutes.",
     durationMinutes: 200,
     questions: euRegulation748Part21Questions,
+  },
+  "part-21-overview-general-provisions": {
+    id: "part-21-overview-general-provisions",
+    title: "Part-21 Overview and General Provisions",
+    description: "Comprehensive assessment on EASA Part-21 and Part-M continuing airworthiness regulations. Covers Part-21 purpose and scope, reporting systems and Airworthiness Directives, manuals and Instructions for Continued Airworthiness, Certificates of Airworthiness, noise certificates, repairs (major, minor, and standard), Part-M continuing airworthiness framework, maintenance standards and procedures, components and materials, Certificates of Release to Service, Airworthiness Review Certificates, Part-ML light aircraft, Part-T third-country leased aircraft, Part-CAMO organizations, maintenance checks (A, B, C, D), service bulletins, maintenance documentation and ATA 100 system, aircraft maintenance programmes, test flights, and handling of aircraft records. Topics span regulatory requirements, maintenance planning, technical standards, and practical maintenance operations. 132 questions, 200 minutes.",
+    durationMinutes: 200,
+    questions: part21OverviewGeneralProvisionsQuestions,
   },
 };
 
