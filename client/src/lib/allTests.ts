@@ -5,6 +5,7 @@ import { easaModule102CertifyingStaffQuestions } from "./easaModule102Certifying
 import { part145MaintenanceOrganisationQuestions } from "./part145MaintenanceOrganisationQuestions";
 import { atomicStructureChemistryQuestions } from "./atomicStructureChemistryQuestions";
 import { physicsStressStrainQuestions } from "./physicsStressStrainQuestions";
+import { kinematicsGearTrainsQuestions } from "./kinematicsGearTrainsQuestions";
 
 export const allTests: Record<string, TestConfig> = {
   "composite-materials": {
@@ -4595,6 +4596,13 @@ export const allTests: Record<string, TestConfig> = {
     description: "Comprehensive assessment on mass, force, weight, moments, couples, torque, centre of gravity, aircraft weighing methods, vectors, stress, strain, elasticity, materials behaviour, shear forces, bending moments, solids/liquids/gases, changes of state, pressure, atmospheric pressure, barometers, Pascal's law, hydraulic principles, buoyancy and Archimedes' principle. Topics include SI and imperial units, vector components, relative velocity, structural stresses, material properties, and fluid mechanics. 183 questions, 200 minutes.",
     durationMinutes: 200,
     questions: physicsStressStrainQuestions,
+  },
+  "kinematics-and-gear-trains": {
+    id: "kinematics-and-gear-trains",
+    title: "Kinematics and Gear Trains",
+    description: "Comprehensive assessment on kinematics, motion, rotational dynamics, periodic motion, vibration, simple machines, and gear trains. Topics include linear motion equations, motion under gravity, rotational movement with angular displacement and velocity, centrifugal and centripetal forces, simple harmonic motion, pendula, free and forced vibration, resonance, mechanical advantage, efficiency, levers, pulleys, inclined planes, screw jacks, hydraulic systems, simple gear trains, worm gears, and epicyclic gears. Applications include aircraft flutter, propeller systems, and turboprop engines. 155 questions, 200 minutes.",
+    durationMinutes: 200,
+    questions: kinematicsGearTrainsQuestions,
   },
 };
 
