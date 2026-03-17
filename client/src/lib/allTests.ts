@@ -9,6 +9,7 @@ import { kinematicsGearTrainsQuestions } from "./kinematicsGearTrainsQuestions";
 import { euRegulation965Questions } from "./euRegulation965Questions";
 import { euRegulation748Part21Questions } from "./euRegulation748Part21Questions";
 import { part21OverviewGeneralProvisionsQuestions } from "./part21OverviewGeneralProvisionsQuestions";
+import { physicsFoundationsQuestions } from "./physicsFoundationsQuestions";
 
 export const allTests: Record<string, TestConfig> = {
   "composite-materials": {
@@ -4627,6 +4628,13 @@ export const allTests: Record<string, TestConfig> = {
     description: "Comprehensive assessment on EASA Part-21 and Part-M continuing airworthiness regulations. Covers Part-21 purpose and scope, reporting systems and Airworthiness Directives, manuals and Instructions for Continued Airworthiness, Certificates of Airworthiness, noise certificates, repairs (major, minor, and standard), Part-M continuing airworthiness framework, maintenance standards and procedures, components and materials, Certificates of Release to Service, Airworthiness Review Certificates, Part-ML light aircraft, Part-T third-country leased aircraft, Part-CAMO organizations, maintenance checks (A, B, C, D), service bulletins, maintenance documentation and ATA 100 system, aircraft maintenance programmes, test flights, and handling of aircraft records. Topics span regulatory requirements, maintenance planning, technical standards, and practical maintenance operations. 132 questions, 200 minutes.",
     durationMinutes: 200,
     questions: part21OverviewGeneralProvisionsQuestions,
+  },
+  "physics-foundations": {
+    id: "physics-foundations",
+    title: "Physics - Foundations and Principles",
+    description: "Comprehensive assessment covering fundamental physics principles essential for aviation maintenance. Topics include mass, weight, and inertia concepts; Newton's three laws of motion and their applications to aircraft systems; propeller and jet engine thrust calculations; force, work, energy, and power with practical aviation examples; kinetic and potential energy; conservation of energy principles; thermal energy and efficiency; momentum and impulse; elastic and inelastic collisions; gyroscopic principles including rigidity and precession; free gyros, rate gyros, tied gyros, and earth gyros; attitude indicators, heading indicators, and turn coordinators; apparent and transport drift; friction types and coefficients; normal forces on inclined planes; and rolling friction characteristics. Includes practical applications relevant to aircraft structural analysis, control systems, and engine operations. 160 questions, 200 minutes.",
+    durationMinutes: 200,
+    questions: physicsFoundationsQuestions,
   },
 };
 
