@@ -10,6 +10,7 @@ import { euRegulation965Questions } from "./euRegulation965Questions";
 import { euRegulation748Part21Questions } from "./euRegulation748Part21Questions";
 import { part21OverviewGeneralProvisionsQuestions } from "./part21OverviewGeneralProvisionsQuestions";
 import { physicsFoundationsQuestions } from "./physicsFoundationsQuestions";
+import { fluidMechanicsAerodynamicsQuestions } from "./fluidMechanicsAerodynamicsQuestions";
 
 export const allTests: Record<string, TestConfig> = {
   "composite-materials": {
@@ -4635,6 +4636,13 @@ export const allTests: Record<string, TestConfig> = {
     description: "Comprehensive assessment covering fundamental physics principles essential for aviation maintenance. Topics include mass, weight, and inertia concepts; Newton's three laws of motion and their applications to aircraft systems; propeller and jet engine thrust calculations; force, work, energy, and power with practical aviation examples; kinetic and potential energy; conservation of energy principles; thermal energy and efficiency; momentum and impulse; elastic and inelastic collisions; gyroscopic principles including rigidity and precession; free gyros, rate gyros, tied gyros, and earth gyros; attitude indicators, heading indicators, and turn coordinators; apparent and transport drift; friction types and coefficients; normal forces on inclined planes; and rolling friction characteristics. Includes practical applications relevant to aircraft structural analysis, control systems, and engine operations. 160 questions, 200 minutes.",
     durationMinutes: 200,
     questions: physicsFoundationsQuestions,
+  },
+  "fluid-mechanics-aerodynamics": {
+    id: "fluid-mechanics-aerodynamics",
+    title: "Fluid Mechanics and Aerodynamic Principles",
+    description: "Comprehensive assessment on fluid mechanics and aerodynamic principles fundamental to aircraft design and performance. Topics include specific gravity and density calculations; viscosity and its effects on aircraft systems; fluid resistance and streamlining; drag forces and coefficients; compressibility effects in hydraulic systems; landing gear shock absorption; static and dynamic pressure relationships; total pressure and Pitot tube measurements; Bernoulli's theorem and its applications; venturi tubes in aircraft carburetors; aerodynamic lift principles; pressure differences on wing surfaces; boundary layer effects on airflow; angle of attack; chord line definition; and lift force calculations. Covers SI and imperial units, practical examples with aircraft types (Boeing 747, A380, 787), fluid properties (water, oil, air), and essential aerodynamic calculations for aircraft maintenance and operations. 135 questions, 200 minutes.",
+    durationMinutes: 200,
+    questions: fluidMechanicsAerodynamicsQuestions,
   },
 };
 
