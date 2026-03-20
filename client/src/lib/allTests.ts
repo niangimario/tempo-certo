@@ -11,6 +11,7 @@ import { euRegulation748Part21Questions } from "./euRegulation748Part21Questions
 import { part21OverviewGeneralProvisionsQuestions } from "./part21OverviewGeneralProvisionsQuestions";
 import { physicsFoundationsQuestions } from "./physicsFoundationsQuestions";
 import { fluidMechanicsAerodynamicsQuestions } from "./fluidMechanicsAerodynamicsQuestions";
+import { thermodynamicsHeatingCoolingQuestions } from "./thermodynamicsHeatingCoolingQuestions";
 
 export const allTests: Record<string, TestConfig> = {
   "composite-materials": {
@@ -4643,6 +4644,13 @@ export const allTests: Record<string, TestConfig> = {
     description: "Comprehensive assessment on fluid mechanics and aerodynamic principles fundamental to aircraft design and performance. Topics include specific gravity and density calculations; viscosity and its effects on aircraft systems; fluid resistance and streamlining; drag forces and coefficients; compressibility effects in hydraulic systems; landing gear shock absorption; static and dynamic pressure relationships; total pressure and Pitot tube measurements; Bernoulli's theorem and its applications; venturi tubes in aircraft carburetors; aerodynamic lift principles; pressure differences on wing surfaces; boundary layer effects on airflow; angle of attack; chord line definition; and lift force calculations. Covers SI and imperial units, practical examples with aircraft types (Boeing 747, A380, 787), fluid properties (water, oil, air), and essential aerodynamic calculations for aircraft maintenance and operations. 135 questions, 200 minutes.",
     durationMinutes: 200,
     questions: fluidMechanicsAerodynamicsQuestions,
+  },
+  "thermodynamics-heating-cooling": {
+    id: "thermodynamics-heating-cooling",
+    title: "Thermodynamics, Heating, and Cooling Systems",
+    description: "Comprehensive assessment on thermodynamics and thermal management systems essential for aircraft maintenance and operations. Topics include temperature measurement devices (mercury, alcohol, resistance, thermistor, thermocouple thermometers); three temperature scales (Celsius, Fahrenheit, Kelvin) and conversions; heat definition and mechanical equivalent; heat capacity and specific heat calculations; latent heat and phase changes (fusion and vaporization); three heat transfer methods (conduction, convection, radiation); thermal expansion of materials with coefficients for various metals and liquids; all four laws of thermodynamics including entropy; gas laws (Avogadro's, Boyle's, Charles', Gay-Lussac's, combined, Dalton's, ideal); thermodynamic processes (isentropic, isothermal, isobaric, isochoric, adiabatic); work done by expanding gases; heat engine cycles (Carnot, Otto, Diesel, Brayton, Rankine, Stirling); refrigeration systems and heat pumps; and heat of combustion values for fuels. Includes practical applications in aircraft engine cycles, hydraulic systems, air conditioning, pressurization, landing gear behavior, and fuel systems. 195 questions, 200 minutes.",
+    durationMinutes: 200,
+    questions: thermodynamicsHeatingCoolingQuestions,
   },
 };
 
