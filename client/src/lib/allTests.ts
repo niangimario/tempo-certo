@@ -14,6 +14,7 @@ import { fluidMechanicsAerodynamicsQuestions } from "./fluidMechanicsAerodynamic
 import { thermodynamicsHeatingCoolingQuestions } from "./thermodynamicsHeatingCoolingQuestions";
 import { electronTheoryElectricalFundamentalsQuestions } from "./electronTheoryElectricalFundamentalsQuestions";
 import { dcCircuitsAcTheoryQuestions } from "./dcCircuitsAcTheoryQuestions";
+import { instrumentSystemsOverviewQuestions } from "./instrumentSystemsOverviewQuestions";
 
 export const allTests: Record<string, TestConfig> = {
   "composite-materials": {
@@ -4667,6 +4668,13 @@ export const allTests: Record<string, TestConfig> = {
     description: "Comprehensive assessment on DC circuits and AC electrical theory for aviation. Covers Module 3.6 DC Circuits (load definition, circuit functions, Ohm's Law, series and parallel circuits, Kirchhoff's laws, voltage drops, current sources, combination circuits, short circuits, open circuits, fuses, power dissipation, series-parallel analysis, ground reference, internal resistance) and Module 3.13 AC Theory (alternating current fundamentals, waveforms, RMS and peak values, frequency and period, three-phase systems, Y and Delta connections, power distribution, phase relationships, polyphase systems, split-phase systems, AC applications in aircraft). 220 questions, 200 minutes.",
     durationMinutes: 200,
     questions: dcCircuitsAcTheoryQuestions,
+  },
+  "instrument-systems-overview": {
+    id: "instrument-systems-overview",
+    title: "Instrument Systems Overview",
+    description: "Comprehensive assessment on aircraft instrument systems and displays. Covers basic instrument classifications (flight, engine, navigation, other systems); primary flight instruments and basic T arrangement; engine, navigation, and communication instruments; glass cockpit systems including EFIS, EICAS, and ECAM architectures; Boeing and Airbus display systems; Garmin G1000 integrated avionics system with PFD and MFD displays; reversionary mode and database management; flight warning computers and crew alerting systems; advantages and disadvantages of modern digital displays versus traditional steam gauges. 50 questions, 60 minutes.",
+    durationMinutes: 60,
+    questions: instrumentSystemsOverviewQuestions,
   },
 };
 
