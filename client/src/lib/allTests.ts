@@ -13,6 +13,7 @@ import { physicsFoundationsQuestions } from "./physicsFoundationsQuestions";
 import { fluidMechanicsAerodynamicsQuestions } from "./fluidMechanicsAerodynamicsQuestions";
 import { thermodynamicsHeatingCoolingQuestions } from "./thermodynamicsHeatingCoolingQuestions";
 import { electronTheoryElectricalFundamentalsQuestions } from "./electronTheoryElectricalFundamentalsQuestions";
+import { dcCircuitsAcTheoryQuestions } from "./dcCircuitsAcTheoryQuestions";
 
 export const allTests: Record<string, TestConfig> = {
   "composite-materials": {
@@ -4659,6 +4660,13 @@ export const allTests: Record<string, TestConfig> = {
     description: "Comprehensive assessment on electron theory, atomic structure, static electricity, electrical terminology, generation of electricity, and DC sources. Covers 5 modules: Module 3.1 Electron Theory (origin of atoms, subatomic particles, electron shells, Pauli's exclusion principle, ionization, valency, semiconductors, photons, excited states, elements and compounds); Module 3.2 Static Electricity and Conduction (electrostatics, charge creation, Coulomb's Law, electric fields, conduction in solids, liquids and gases, thermionic emission); Module 3.3 Electrical Terminology (energy types, current definition, electron drift, Ohm's Law, Kirchhoff's Laws, EMF, resistance, conductance); Module 3.4 Generation of Electricity (6 methods: friction, pressure, heat, light, magnetism, chemical action; Van de Graaff, piezoelectric effect, Seebeck effect, photoelectric effect, primary and secondary cells, wet and dry cells); Module 3.5 DC Sources (batteries, cells, electrodes, electrolytes, local action, polarization, dry cells, lead-acid cells, nickel-cadmium batteries, cell connections in series/parallel, thermal runaway, battery ratings, charging types, thermocouples, photocells, and photoconductive cells). 203 questions, 200 minutes.",
     durationMinutes: 200,
     questions: electronTheoryElectricalFundamentalsQuestions,
+  },
+  "dc-circuits-ac-theory": {
+    id: "dc-circuits-ac-theory",
+    title: "DC Circuits and AC Theory",
+    description: "Comprehensive assessment on DC circuits and AC electrical theory for aviation. Covers Module 3.6 DC Circuits (load definition, circuit functions, Ohm's Law, series and parallel circuits, Kirchhoff's laws, voltage drops, current sources, combination circuits, short circuits, open circuits, fuses, power dissipation, series-parallel analysis, ground reference, internal resistance) and Module 3.13 AC Theory (alternating current fundamentals, waveforms, RMS and peak values, frequency and period, three-phase systems, Y and Delta connections, power distribution, phase relationships, polyphase systems, split-phase systems, AC applications in aircraft). 220 questions, 200 minutes.",
+    durationMinutes: 200,
+    questions: dcCircuitsAcTheoryQuestions,
   },
 };
 
