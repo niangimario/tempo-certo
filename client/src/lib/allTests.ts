@@ -12,6 +12,7 @@ import { part21OverviewGeneralProvisionsQuestions } from "./part21OverviewGenera
 import { physicsFoundationsQuestions } from "./physicsFoundationsQuestions";
 import { fluidMechanicsAerodynamicsQuestions } from "./fluidMechanicsAerodynamicsQuestions";
 import { thermodynamicsHeatingCoolingQuestions } from "./thermodynamicsHeatingCoolingQuestions";
+import { electronTheoryElectricalFundamentalsQuestions } from "./electronTheoryElectricalFundamentalsQuestions";
 
 export const allTests: Record<string, TestConfig> = {
   "composite-materials": {
@@ -4651,6 +4652,13 @@ export const allTests: Record<string, TestConfig> = {
     description: "Comprehensive assessment on thermodynamics and thermal management systems essential for aircraft maintenance and operations. Topics include temperature measurement devices (mercury, alcohol, resistance, thermistor, thermocouple thermometers); three temperature scales (Celsius, Fahrenheit, Kelvin) and conversions; heat definition and mechanical equivalent; heat capacity and specific heat calculations; latent heat and phase changes (fusion and vaporization); three heat transfer methods (conduction, convection, radiation); thermal expansion of materials with coefficients for various metals and liquids; all four laws of thermodynamics including entropy; gas laws (Avogadro's, Boyle's, Charles', Gay-Lussac's, combined, Dalton's, ideal); thermodynamic processes (isentropic, isothermal, isobaric, isochoric, adiabatic); work done by expanding gases; heat engine cycles (Carnot, Otto, Diesel, Brayton, Rankine, Stirling); refrigeration systems and heat pumps; and heat of combustion values for fuels. Includes practical applications in aircraft engine cycles, hydraulic systems, air conditioning, pressurization, landing gear behavior, and fuel systems. 195 questions, 200 minutes.",
     durationMinutes: 200,
     questions: thermodynamicsHeatingCoolingQuestions,
+  },
+  "electron-theory-electrical-fundamentals": {
+    id: "electron-theory-electrical-fundamentals",
+    title: "Electron Theory and Electrical Fundamentals",
+    description: "Comprehensive assessment on electron theory, atomic structure, static electricity, electrical terminology, generation of electricity, and DC sources. Covers 5 modules: Module 3.1 Electron Theory (origin of atoms, subatomic particles, electron shells, Pauli's exclusion principle, ionization, valency, semiconductors, photons, excited states, elements and compounds); Module 3.2 Static Electricity and Conduction (electrostatics, charge creation, Coulomb's Law, electric fields, conduction in solids, liquids and gases, thermionic emission); Module 3.3 Electrical Terminology (energy types, current definition, electron drift, Ohm's Law, Kirchhoff's Laws, EMF, resistance, conductance); Module 3.4 Generation of Electricity (6 methods: friction, pressure, heat, light, magnetism, chemical action; Van de Graaff, piezoelectric effect, Seebeck effect, photoelectric effect, primary and secondary cells, wet and dry cells); Module 3.5 DC Sources (batteries, cells, electrodes, electrolytes, local action, polarization, dry cells, lead-acid cells, nickel-cadmium batteries, cell connections in series/parallel, thermal runaway, battery ratings, charging types, thermocouples, photocells, and photoconductive cells). 203 questions, 200 minutes.",
+    durationMinutes: 200,
+    questions: electronTheoryElectricalFundamentalsQuestions,
   },
 };
 
