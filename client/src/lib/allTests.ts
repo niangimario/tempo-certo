@@ -15,6 +15,7 @@ import { thermodynamicsHeatingCoolingQuestions } from "./thermodynamicsHeatingCo
 import { electronTheoryElectricalFundamentalsQuestions } from "./electronTheoryElectricalFundamentalsQuestions";
 import { dcCircuitsAcTheoryQuestions } from "./dcCircuitsAcTheoryQuestions";
 import { instrumentSystemsOverviewQuestions } from "./instrumentSystemsOverviewQuestions";
+import { basicComputerArchitectureQuestions } from "./basicComputerArchitectureQuestions";
 
 export const allTests: Record<string, TestConfig> = {
   "composite-materials": {
@@ -4675,6 +4676,13 @@ export const allTests: Record<string, TestConfig> = {
     description: "Comprehensive assessment on aircraft instrument systems and displays. Covers basic instrument classifications (flight, engine, navigation, other systems); primary flight instruments and basic T arrangement; engine, navigation, and communication instruments; glass cockpit systems including EFIS, EICAS, and ECAM architectures; Boeing and Airbus display systems; Garmin G1000 integrated avionics system with PFD and MFD displays; reversionary mode and database management; flight warning computers and crew alerting systems; advantages and disadvantages of modern digital displays versus traditional steam gauges. 50 questions, 60 minutes.",
     durationMinutes: 60,
     questions: instrumentSystemsOverviewQuestions,
+  },
+  "basic-computer-architecture": {
+    id: "basic-computer-architecture",
+    title: "Basic Computer Architecture",
+    description: "Comprehensive assessment on computer architecture and digital systems fundamentals. Covers computer architecture basics, motherboard structure, core components and the system bus (address bus, data bus, control bus). Includes computer I/O systems (inputs, outputs, ADC/DAC converters); CPU structure (microprocessors, ALU, registers, control units); data representation (bits, bytes, kilobytes, megabytes, ASCII encoding); memory types (volatile/non-volatile, semiconductor, magnetic, magnetic tape, magnetic disc, optical discs, RAM, ROM, PROM, EPROM, EEPROM, flash memory); cache memory and registers; computer software categories (system and application); programming languages (machine, assembly, high-level); aircraft systems (LRU, HMI, communication protocols); and related terminology. 112 questions, 120 minutes.",
+    durationMinutes: 120,
+    questions: basicComputerArchitectureQuestions,
   },
 };
 
