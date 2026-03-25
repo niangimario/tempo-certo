@@ -18,6 +18,7 @@ import { instrumentSystemsOverviewQuestions } from "./instrumentSystemsOverviewQ
 import { basicComputerArchitectureQuestions } from "./basicComputerArchitectureQuestions";
 import { multiplicationDivisionMethodsQuestions } from "./multiplicationDivisionMethodsQuestions";
 import { lightRadiometryQuestions } from "./lightRadiometryQuestions";
+import { electrostaticDischargeQuestions } from "./electrostaticDischargeQuestions";
 
 export const allTests: Record<string, TestConfig> = {
   "composite-materials": {
@@ -4699,6 +4700,13 @@ export const allTests: Record<string, TestConfig> = {
     description: "Comprehensive assessment on light measurement and display technologies in aviation. Covers radiometry and photometry fundamentals; units of light intensity (candela, lumen, lux); LED technology and displays; cathode ray tubes (CRT); LCD technology including twisted nematic and active-matrix displays; touchscreen technologies; organic light-emitting diodes (OLED); MicroLED displays; plasma screens; and advanced display topics. Includes comparison of display technologies for aircraft applications. 100 questions, 100 minutes.",
     durationMinutes: 100,
     questions: lightRadiometryQuestions,
+  },
+  "electrostatic-discharge": {
+    id: "electrostatic-discharge",
+    title: "Electrostatic Discharge and Triboelectric Series",
+    description: "Comprehensive assessment on electrostatic discharge (ESD) phenomena, triboelectric series, device sensitivity classifications (HBM, CDM, MM), hard and soft failures, ESD precautions and identification, static-free work stations, handling procedures for sensitive devices, PCB removal and installation, metal-encased LRU handling, fueling safety protocols, and electrical bonding procedures. Time limit: 100 minutes.",
+    durationMinutes: 100,
+    questions: electrostaticDischargeQuestions,
   },
 };
 
