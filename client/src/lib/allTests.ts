@@ -19,6 +19,7 @@ import { basicComputerArchitectureQuestions } from "./basicComputerArchitectureQ
 import { multiplicationDivisionMethodsQuestions } from "./multiplicationDivisionMethodsQuestions";
 import { lightRadiometryQuestions } from "./lightRadiometryQuestions";
 import { electrostaticDischargeQuestions } from "./electrostaticDischargeQuestions";
+import { acarsCommunicationSystemQuestions } from "./acarsCommunicationSystemQuestions";
 
 export const allTests: Record<string, TestConfig> = {
   "composite-materials": {
@@ -4707,6 +4708,13 @@ export const allTests: Record<string, TestConfig> = {
     description: "Comprehensive assessment on electrostatic discharge (ESD) phenomena, triboelectric series, device sensitivity classifications (HBM, CDM, MM), hard and soft failures, ESD precautions and identification, static-free work stations, handling procedures for sensitive devices, PCB removal and installation, metal-encased LRU handling, fueling safety protocols, and electrical bonding procedures. Time limit: 100 minutes.",
     durationMinutes: 100,
     questions: electrostaticDischargeQuestions,
+  },
+  "acars-communication-system": {
+    id: "acars-communication-system",
+    title: "Aircraft Communication Addressing and Reporting System (ACARS)",
+    description: "Comprehensive assessment on ACARS system, fly-by-wire technology, flight management systems, inertial reference systems, built-in test equipment, ECAM/EICAS systems, electronic flight instruments, GPS and GNSS systems, ADS-B technology, TCAS collision avoidance, integrated modular avionics, cabin systems, and information systems. Covers automation, navigation, communication, surveillance and monitoring systems in modern aircraft. 200 questions, 200 minutes.",
+    durationMinutes: 200,
+    questions: acarsCommunicationSystemQuestions,
   },
 };
 
