@@ -17,6 +17,7 @@ import { dcCircuitsAcTheoryQuestions } from "./dcCircuitsAcTheoryQuestions";
 import { instrumentSystemsOverviewQuestions } from "./instrumentSystemsOverviewQuestions";
 import { basicComputerArchitectureQuestions } from "./basicComputerArchitectureQuestions";
 import { multiplicationDivisionMethodsQuestions } from "./multiplicationDivisionMethodsQuestions";
+import { lightRadiometryQuestions } from "./lightRadiometryQuestions";
 
 export const allTests: Record<string, TestConfig> = {
   "composite-materials": {
@@ -4691,6 +4692,13 @@ export const allTests: Record<string, TestConfig> = {
     description: "Assessment on different computational methods for multiplication and division. Covers Theme 1: General Introduction to mathematical methods; Theme 2: Traditional multiplication method with partial results; Theme 3: Boxes method (area method) for multiplication using place value decomposition; Theme 4: Traditional long division method step-by-step process; Theme 5: Repeated subtraction method using multiples; Theme 6: Overall purpose and comparison of methods emphasizing understanding over memorization. Includes explanation of how different methods develop deeper understanding of numbers and place value. 22 questions, 30 minutes.",
     durationMinutes: 30,
     questions: multiplicationDivisionMethodsQuestions,
+  },
+  "light-radiometry": {
+    id: "light-radiometry",
+    title: "Light and Radiometry",
+    description: "Comprehensive assessment on light measurement and display technologies in aviation. Covers radiometry and photometry fundamentals; units of light intensity (candela, lumen, lux); LED technology and displays; cathode ray tubes (CRT); LCD technology including twisted nematic and active-matrix displays; touchscreen technologies; organic light-emitting diodes (OLED); MicroLED displays; plasma screens; and advanced display topics. Includes comparison of display technologies for aircraft applications. 100 questions, 100 minutes.",
+    durationMinutes: 100,
+    questions: lightRadiometryQuestions,
   },
 };
 
