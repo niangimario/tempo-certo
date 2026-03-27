@@ -21,6 +21,7 @@ import { lightRadiometryQuestions } from "./lightRadiometryQuestions";
 import { electrostaticDischargeQuestions } from "./electrostaticDischargeQuestions";
 import { acarsCommunicationSystemQuestions } from "./acarsCommunicationSystemQuestions";
 import { houseVocabularyReadingComprehensionQuestions, houseReadingPassage } from "./houseVocabularyReadingComprehensionQuestions";
+import { houseVocabularyActionsQuestions, houseActionsReadingPassage } from "./houseVocabularyActionsQuestions";
 
 export const allTests: Record<string, TestConfig> = {
   "composite-materials": {
@@ -4724,6 +4725,14 @@ export const allTests: Record<string, TestConfig> = {
     durationMinutes: 45,
     questions: houseVocabularyReadingComprehensionQuestions,
     passageText: houseReadingPassage,
+  },
+  "house-vocabulary-actions": {
+    id: "house-vocabulary-actions",
+    title: "English Vocabulary: House Actions and Verbs",
+    description: "English language assessment covering action verbs and vocabulary related to house maintenance and daily activities. Students read a descriptive text about various actions performed with different parts of a house and answer 22 comprehension questions covering fence, walls, basement, roof, chimney, attic, windows, shutters, door, porch, stairs, balcony, drainpipes, lights, path, garage, driveway, mailbox, pool, and patio. Focus on verb recognition, contextual understanding, and vocabulary in action contexts. 22 questions, 45 minutes.",
+    durationMinutes: 45,
+    questions: houseVocabularyActionsQuestions,
+    passageText: houseActionsReadingPassage,
   },
 };
 
