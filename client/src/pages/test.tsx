@@ -173,6 +173,14 @@ export function TestPage({ testConfig, sessionId, startTime, onSubmit }: TestPag
 
           <Card className="mb-8 shadow-lg border-2">
             <CardContent className="p-8 sm:p-10">
+              {testConfig.passageText && (
+                <div className="mb-10 pb-10 border-b">
+                  <p className="text-sm font-semibold text-primary mb-4">REFERENCE TEXT:</p>
+                  <div className="bg-muted/50 rounded-lg p-6 text-sm leading-relaxed text-foreground whitespace-pre-wrap">
+                    {testConfig.passageText}
+                  </div>
+                </div>
+              )}
               <h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-10 leading-relaxed" data-testid="text-question">
                 {currentQuestion.text}
               </h2>
