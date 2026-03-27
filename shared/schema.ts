@@ -13,6 +13,7 @@ export const testConfigSchema = z.object({
   description: z.string(),
   durationMinutes: z.number(),
   questions: z.array(questionSchema),
+  passageText: z.string().optional(),
 });
 
 export const testSessionSchema = z.object({

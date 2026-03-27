@@ -20,7 +20,7 @@ import { multiplicationDivisionMethodsQuestions } from "./multiplicationDivision
 import { lightRadiometryQuestions } from "./lightRadiometryQuestions";
 import { electrostaticDischargeQuestions } from "./electrostaticDischargeQuestions";
 import { acarsCommunicationSystemQuestions } from "./acarsCommunicationSystemQuestions";
-import { houseVocabularyReadingComprehensionQuestions } from "./houseVocabularyReadingComprehensionQuestions";
+import { houseVocabularyReadingComprehensionQuestions, houseReadingPassage } from "./houseVocabularyReadingComprehensionQuestions";
 
 export const allTests: Record<string, TestConfig> = {
   "composite-materials": {
@@ -4723,6 +4723,7 @@ export const allTests: Record<string, TestConfig> = {
     description: "English language assessment covering vocabulary and reading comprehension skills. Students read a descriptive text about various parts of a house and answer 20 questions about the vocabulary and meaning of different architectural and structural elements. Focus on vocabulary recognition, contextual understanding, and comprehension skills. 20 questions, 45 minutes.",
     durationMinutes: 45,
     questions: houseVocabularyReadingComprehensionQuestions,
+    passageText: houseReadingPassage,
   },
 };
 

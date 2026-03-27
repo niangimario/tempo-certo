@@ -1,5 +1,23 @@
 import type { Question } from "@shared/schema";
 
+export const houseReadingPassage = `READ THE TEXT BELOW, THEN ANSWER THE FOLLOWING QUESTIONS
+
+As you approach the house, the first thing you might notice is the fence, which is a barrier around the property that marks the boundary and gives privacy or security. Behind it, you see the walls, which are the strong vertical structures that hold the house together and separate the inside from the outside.
+If you could go underground, you'd find the basement, a lower level of the house often used for storage, laundry, or extra rooms.
+Looking up, you see the roof, which covers the house and protects it from rain, sun, and wind. Sticking out from the roof is the chimney, a vertical structure that lets smoke escape from a fireplace inside.
+At the top of the house, just under the roof, there is the attic, a small space usually used to store old items.
+On the sides of the house, there are windows, which let in light and fresh air. Some windows have shutters, which are panels that can be closed for protection or decoration.
+To enter the house, you go through the door, which opens and closes to allow people to come in and out. Before stepping inside, you might stand on the porch, a small covered area at the entrance where people can sit or relax.
+Once inside, you use the stairs to move between different floors of the house.
+If you go outside again and look higher up, you might see a balcony, which is a platform attached to the upper floor where people can stand or sit outside.
+Along the sides of the house, there are drainpipes, which carry rainwater from the roof down to the ground so it doesn't damage the building.
+When it gets dark, lights help illuminate the house and the surrounding area.
+Leading up to the house, there is usually a path, a small walkway for people to walk on.
+Next to the house, you might find a garage, where cars are parked and tools are stored. The road leading from the street to the garage is called the driveway.
+Near the entrance, there is often a mailbox, where letters and packages are delivered.
+In the backyard, you might see a pool, which is a place filled with water for swimming and relaxing.
+Finally, there is the patio, an outdoor area usually paved with stone or concrete, where people sit, eat, or enjoy fresh air.`;
+
 export const houseVocabularyReadingComprehensionQuestions: Question[] = [
   {
     id: 1,
