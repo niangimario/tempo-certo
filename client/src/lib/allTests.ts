@@ -20,6 +20,7 @@ import { multiplicationDivisionMethodsQuestions } from "./multiplicationDivision
 import { lightRadiometryQuestions } from "./lightRadiometryQuestions";
 import { electrostaticDischargeQuestions } from "./electrostaticDischargeQuestions";
 import { acarsCommunicationSystemQuestions } from "./acarsCommunicationSystemQuestions";
+import { houseVocabularyReadingComprehensionQuestions } from "./houseVocabularyReadingComprehensionQuestions";
 
 export const allTests: Record<string, TestConfig> = {
   "composite-materials": {
@@ -4715,6 +4716,13 @@ export const allTests: Record<string, TestConfig> = {
     description: "Comprehensive assessment on ACARS system, fly-by-wire technology, flight management systems, inertial reference systems, built-in test equipment, ECAM/EICAS systems, electronic flight instruments, GPS and GNSS systems, ADS-B technology, TCAS collision avoidance, integrated modular avionics, cabin systems, and information systems. Covers automation, navigation, communication, surveillance and monitoring systems in modern aircraft. 200 questions, 200 minutes.",
     durationMinutes: 200,
     questions: acarsCommunicationSystemQuestions,
+  },
+  "house-vocabulary-reading": {
+    id: "house-vocabulary-reading",
+    title: "English Vocabulary: House Reading Comprehension",
+    description: "English language assessment covering vocabulary and reading comprehension skills. Students read a descriptive text about various parts of a house and answer 20 questions about the vocabulary and meaning of different architectural and structural elements. Focus on vocabulary recognition, contextual understanding, and comprehension skills. 20 questions, 45 minutes.",
+    durationMinutes: 45,
+    questions: houseVocabularyReadingComprehensionQuestions,
   },
 };
 
