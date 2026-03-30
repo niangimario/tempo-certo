@@ -1,4 +1,4 @@
-import { Question } from "@/shared/schema";
+import type { Question } from "@shared/schema";
 
 export const presentSimpleReadingPassage = `READ THE TEXT BELOW, THEN ANSWER THE FOLLOWING QUESTIONS
 The Present Simple is a verb tense used to describe actions, situations, and facts that are generally true, regularly repeated, or permanently valid. It is not mainly used to talk about what is happening at the moment, but rather about what happens always, usually, or repeatedly over time.
@@ -10,127 +10,127 @@ Another key use of the Present Simple is to describe schedules or fixed timetabl
 Finally, the Present Simple is used to express facts or general truths. These are statements that are always true, especially in scientific or natural contexts. For example, "Water boils at 100 degrees Celsius" or "The Earth orbits the Sun." These facts do not change over time.
 It is important to distinguish between these uses. For example, a routine describes a repeated action, while frequency emphasizes how often that action occurs. A schedule refers to a fixed time in a timetable, while a fact describes something universally true. A permanent state refers to a stable condition, often related to identity, feelings, or knowledge.
 In conclusion, the Present Simple is a fundamental tense used to describe different types of general truths, including permanent situations, repeated actions, frequency, scheduled events, and universal facts. Understanding these distinctions is essential for accurate communication, especially in contexts such as academic writing and language proficiency tests like IELTS.
-🧠 PRESENT SIMPLE — COMPLETE LESSON
+PRESENT SIMPLE — COMPLETE LESSON
 ________________________________________
-📌 1. WHAT IS THE PRESENT SIMPLE?
+1. WHAT IS THE PRESENT SIMPLE?
 The Present Simple is used to describe:
-•	things that are always true 
-•	things that happen regularly 
-•	things that are fixed or permanent 
-👉 Key idea:
+- things that are always true 
+- things that happen regularly 
+- things that are fixed or permanent 
+Key idea:
 The Present Simple is not about "now", but about "generally", "usually", or "always"
 ________________________________________
-🏗️ 2. STRUCTURE
-✔️ Affirmative
-•	I/You/We/They → base verb 
-•	He/She/It → verb + -s 
-✔️ Examples:
-•	She works every day 
-•	They play football 
+2. STRUCTURE
+Affirmative
+- I/You/We/They → base verb 
+- He/She/It → verb + -s 
+Examples:
+- She works every day 
+- They play football 
 ________________________________________
-❌ Negative
-•	do not (don't) / does not (doesn't) 
-✔️ Examples:
-•	She doesn't work on Sundays 
-•	They don't like coffee 
+Negative
+- do not (don't) / does not (doesn't) 
+Examples:
+- She doesn't work on Sundays 
+- They don't like coffee 
 ________________________________________
-❓ Questions
-•	Do / Does + subject + base verb 
-✔️ Examples:
-•	Do you work here? 
-•	Does she live in Luanda? 
+Questions
+- Do / Does + subject + base verb 
+Examples:
+- Do you work here? 
+- Does she live in Luanda? 
 ________________________________________
-🎯 3. MAIN USES OF THE PRESENT SIMPLE
+3. MAIN USES OF THE PRESENT SIMPLE
 ________________________________________
-🔵 1. PERMANENT STATE
-📌 When to use:
-•	identity 
-•	profession 
-•	emotions 
-•	knowledge 
-•	long-term situations 
+1. PERMANENT STATE
+When to use:
+- identity 
+- profession 
+- emotions 
+- knowledge 
+- long-term situations 
 ________________________________________
-✔️ Examples:
-•	She lives in Luanda 
-•	He works as an engineer 
-•	She loves her job 
-•	I know the answer 
+Examples:
+- She lives in Luanda 
+- He works as an engineer 
+- She loves her job 
+- I know the answer 
 ________________________________________
-⚠️ Important:
+Important:
 These verbs are often stative verbs:
-•	love, know, believe, understand, need 
-👉 They describe states, not actions.
+- love, know, believe, understand, need 
+They describe states, not actions.
 ________________________________________
-🧠 Rule:
+Rule:
 If it describes who someone is or how they feel → Permanent State
 ________________________________________
-🔁 2. ROUTINE (HABITS)
-📌 When to use:
-•	repeated actions 
-•	daily habits 
+2. ROUTINE (HABITS)
+When to use:
+- repeated actions 
+- daily habits 
 ________________________________________
-✔️ Examples:
-•	She wakes up at 6 
-•	He goes to the gym 
-•	They eat breakfast together 
+Examples:
+- She wakes up at 6 
+- He goes to the gym 
+- They eat breakfast together 
 ________________________________________
-⚠️ Note:
+Note:
 Even without "every day", it is still a routine.
 ________________________________________
-🧠 Rule:
+Rule:
 If you can add "every day" → Routine
 ________________________________________
-📊 3. FREQUENCY
-📌 When to use:
+3. FREQUENCY
+When to use:
 To show how often something happens
 ________________________________________
-✔️ Common adverbs:
-•	always 
-•	usually 
-•	often 
-•	sometimes 
-•	rarely 
-•	seldom 
-•	never 
+Common adverbs:
+- always 
+- usually 
+- often 
+- sometimes 
+- rarely 
+- seldom 
+- never 
 ________________________________________
-✔️ Examples:
-•	She always checks her phone 
-•	He usually arrives early 
-•	They rarely go out 
+Examples:
+- She always checks her phone 
+- He usually arrives early 
+- They rarely go out 
 ________________________________________
-🧠 Rule:
+Rule:
 If there is a frequency word → Frequency
 ________________________________________
-📅 4. SCHEDULE (TIMETABLE / FIXED EVENTS)
-📌 When to use:
-•	fixed plans 
-•	timetables 
-•	transport schedules 
-•	official events 
+4. SCHEDULE (TIMETABLE / FIXED EVENTS)
+When to use:
+- fixed plans 
+- timetables 
+- transport schedules 
+- official events 
 ________________________________________
-✔️ Examples:
-•	The meeting starts at 8:00 
-•	The train leaves at 6:00 
-•	The class begins tomorrow 
+Examples:
+- The meeting starts at 8:00 
+- The train leaves at 6:00 
+- The class begins tomorrow 
 ________________________________________
-⚠️ Very important:
-👉 Even for the future, we use Present Simple for schedules.
+Very important:
+Even for the future, we use Present Simple for schedules.
 ________________________________________
-🧠 Rule:
+Rule:
 If it looks like a timetable → Schedule
 ________________________________________
-🌍 5. FACT (GENERAL TRUTH)
-📌 When to use:
-•	scientific facts 
-•	natural laws 
-•	universal truths 
+5. FACT (GENERAL TRUTH)
+When to use:
+- scientific facts 
+- natural laws 
+- universal truths 
 ________________________________________
-✔️ Examples:
-•	Water boils at 100°C 
-•	The Earth orbits the Sun 
-•	Light travels fast 
+Examples:
+- Water boils at 100°C 
+- The Earth orbits the Sun 
+- Light travels fast 
 ________________________________________
-🧠 Rule:
+Rule:
 If it is always true → Fact`;
 
 export const presentSimpleQuestions: Question[] = [
