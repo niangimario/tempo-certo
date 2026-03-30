@@ -22,6 +22,7 @@ import { electrostaticDischargeQuestions } from "./electrostaticDischargeQuestio
 import { acarsCommunicationSystemQuestions } from "./acarsCommunicationSystemQuestions";
 import { houseVocabularyReadingComprehensionQuestions, houseReadingPassage } from "./houseVocabularyReadingComprehensionQuestions";
 import { houseVocabularyActionsQuestions, houseActionsReadingPassage } from "./houseVocabularyActionsQuestions";
+import { presentSimpleQuestions, presentSimpleReadingPassage } from "./presentSimpleQuestions";
 
 export const allTests: Record<string, TestConfig> = {
   "composite-materials": {
@@ -4733,6 +4734,14 @@ export const allTests: Record<string, TestConfig> = {
     durationMinutes: 45,
     questions: houseVocabularyActionsQuestions,
     passageText: houseActionsReadingPassage,
+  },
+  "present-simple": {
+    id: "present-simple",
+    title: "English Grammar: Present Simple Tense",
+    description: "Comprehensive English grammar assessment on the Present Simple tense. Students read a detailed lesson about Present Simple structure and uses, including permanent states, routines, frequency, schedules, and general facts. The exam includes 100 comprehension questions where students identify the grammatical category expressed by different sentences. Topics covered: Present Simple structure (affirmative, negative, questions), permanent states, routines and habits, frequency adverbs (always, usually, often, sometimes, rarely, never), scheduled events, scientific facts, and distinction between different uses. 100 questions, 250 minutes.",
+    durationMinutes: 250,
+    questions: presentSimpleQuestions,
+    passageText: presentSimpleReadingPassage,
   },
 };
 
