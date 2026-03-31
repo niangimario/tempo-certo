@@ -23,7 +23,7 @@ import { acarsCommunicationSystemQuestions } from "./acarsCommunicationSystemQue
 import { houseVocabularyReadingComprehensionQuestions, houseReadingPassage } from "./houseVocabularyReadingComprehensionQuestions";
 import { houseVocabularyActionsQuestions, houseActionsReadingPassage } from "./houseVocabularyActionsQuestions";
 import { presentSimpleQuestions, presentSimpleReadingPassage } from "./presentSimpleQuestions";
-import { propulsiveForceQuestions, propulsiveForceReadingPassage } from "./propulsiveForceQuestions";
+import { propulsiveForceQuestions } from "./propulsiveForceQuestions";
 
 export const allTests: Record<string, TestConfig> = {
   "composite-materials": {
@@ -4747,10 +4747,9 @@ export const allTests: Record<string, TestConfig> = {
   "propulsive-force": {
     id: "propulsive-force",
     title: "Propulsive Force & Propeller Systems",
-    description: "Comprehensive assessment on propulsive force, propeller design, operation, and handling effects. Students read detailed lesson on propeller fundamentals, blade geometry, pitch control, efficiency, forces, and aircraft handling characteristics. The exam includes 102 technical questions covering propeller types, configurations, blade angles, pitch mechanisms, vibration, engine integration, and aerodynamic effects. Topics covered: propeller basics and thrust conversion, blade geometry and terminology, pitch and slip concepts, angle of attack, blade twist, propeller configurations, solidity, efficiency, tip speed effects, windmilling and feathering, reverse thrust, forces on blades, twisting moments, handling effects (P-factor, slipstream, torque, gyroscopic), critical engine selection, vibration and resonance, turboprop engines, and clearance specifications. 102 questions, 150 minutes.",
+    description: "Comprehensive assessment on propulsive force, propeller design, operation, and handling effects. Students answer 102 technical questions covering propeller types, configurations, blade angles, pitch mechanisms, vibration, engine integration, and aerodynamic effects. Topics covered: propeller basics and thrust conversion, blade geometry and terminology, pitch and slip concepts, angle of attack, blade twist, propeller configurations, solidity, efficiency, tip speed effects, windmilling and feathering, reverse thrust, forces on blades, twisting moments, handling effects (P-factor, slipstream, torque, gyroscopic), critical engine selection, vibration and resonance, turboprop engines, and clearance specifications. 102 questions, 150 minutes.",
     durationMinutes: 150,
     questions: propulsiveForceQuestions,
-    passageText: propulsiveForceReadingPassage,
   },
 };
 

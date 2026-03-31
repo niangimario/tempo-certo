@@ -1,59 +1,5 @@
 import type { Question } from "@shared/schema";
 
-export const propulsiveForceReadingPassage = `Theme: Introduction & Propulsive Force
-Propellers are one of the primary mechanisms for converting engine power into thrust for aircraft propulsion. The earliest practical aircraft designs used propellers to create thrust, with designs evolving from flat boards to sophisticated aerofoil-shaped blades made from materials such as aluminium alloy and composite materials. A propeller converts engine power into propulsive force by imparting rearward motion to a mass of air, moving a large mass of air rearward at a relatively slow speed compared to gas turbine engines.
-
-Theme: Basic Terms & Blade Geometry
-Propeller blades have clearly defined edges: the leading edge and trailing edge. The blade angle is the angle between the propeller's plane of rotation and the chord line. A blade station is a reference position on a blade at a specified distance from the hub centre. Blade pitch represents the distance a propeller section will move forward in one revolution, and pitch distribution describes the gradual twist in the propeller blade from shank to tip.
-
-Theme: Blade Angle, Pitch & Slip
-The blade angle comprises two components: the angle of attack and the helix angle. Geometric pitch is the theoretical distance a propeller would move in one revolution if it were 100% efficient, while effective pitch is the actual distance a propeller advances through the air in one revolution. Propeller slip is the difference between geometric pitch and effective pitch.
-
-Theme: The Blade Element & Angle of Attack
-The angle of attack for a propeller blade is the acute angle between the chord line and the relative wind. At constant RPM, if the forward velocity of the aircraft increases, the angle of attack decreases. Conversely, if RPM increases, the angle of attack increases. The two airflow components that affect the angle of attack are airflow due to RPM and airflow due to aircraft true airspeed (TAS). In a dive with significantly increased forward velocity, the angle of attack can become negative, causing the propeller to exert a retarding force.
-
-Theme: Blade Twist
-Propeller blades are twisted to maintain an efficient angle of attack from root to tip. The optimum angle of attack for maximum propeller efficiency is 4-6 degrees.
-
-Theme: Propeller Configuration
-A tractor propeller pulls the airframe and is fitted forward of the mainplane, while a pusher propeller is usually fitted behind the mainplane. A contra-rotating propeller configuration consists of two propellers on one shaft, driven by the same engine, rotating in opposite directions. Counter-rotating propellers on multi-engine aircraft balance the torque effects on the airframe.
-
-Theme: Propeller Solidity
-Solidity describes the ability of the propeller to absorb power from the engine. It is defined as the surface area of the propeller divided by the surface area of the propeller disc. Solidity can be increased by increasing the number of blades.
-
-Theme: Propeller Efficiency
-Propeller efficiency is calculated as output power divided by input power. The efficiency of a fixed-pitch propeller is limited to a single airspeed because the angle of attack decreases as aircraft velocity increases. At zero forward speed, propeller efficiency is zero. A fixed-pitch propeller designed to be efficient during climb is known as a climb propeller.
-
-Theme: Tip Speed
-Helical tip velocity is the vector sum of rotational velocity and translational velocity. Propeller efficiency begins to decrease dramatically when the helical tip velocity exceeds 0.85 Mach. The sudden reduction in efficiency at high tip speeds is caused by compressibility effects and shockwaves.
-
-Theme: Right and Left-Handed Propellers
-A right-handed propeller rotates clockwise when viewed from aft looking forward. If a pilot sees the upper blade of the propeller pass the windscreen moving from left to right, it is a right-handed propeller.
-
-Theme: Forces on a Blade Element
-On a propeller, the aerodynamic force parallel to the flight path is called thrust. The resistance to motion in the plane of rotation is called torque force.
-
-Theme: Windmilling
-During windmilling, the pitch of a variable pitch propeller goes fine. In the windmilling condition, the total reaction on the blade results in thrust in the reverse direction and torque assisting rotation.
-
-Theme: Feathering
-The primary purpose of feathering a propeller after an engine failure is to reduce drag to a minimum. A feathered propeller blade is set at approximately 90 degrees to the plane of rotation. A slightly negative angle of attack is used on a feathered propeller blade to prevent the propeller from turning.
-
-Theme: Reverse Thrust
-Reverse thrust is obtained by turning the propeller blades to approximately negative 20 degrees. A common use for reverse thrust is as additional braking after landing. On a wet runway, reverse thrust is preferred over wheel brakes because it does not cause the wheels to lock and skid.
-
-Theme: Forces Acting on the Propeller
-Centrifugal force puts the greatest stress on a propeller, trying to pull the blades out of the hub. Thrust bending force attempts to bend the propeller blades forward at the tips. Torque bending force is caused by the drag of the blades as they turn through the air.
-
-Theme: Aerodynamic & Centrifugal Twisting Moments
-Aerodynamic Twisting Moment (ATM) tries to twist a blade to a higher angle (coarse-seeking). Centrifugal Twisting Moment (CTM) tries to decrease the blade angle (fine-seeking). At operational RPM, Centrifugal Twisting Moment (CTM) is generally greater. Counterweights on a propeller oppose the blade's natural CTM and help move the blade to a higher pitch.
-
-Theme: Turning Moments & Pitch Range
-When a propeller is windmilling, ATM reverses and becomes fine-seeking. The total pitch range of a high-performance propeller extends from feathered to reverse. Pitch stops prevent inadvertent operation outside the desired pitch range.
-
-Theme: Handling Effects - Multiple Topics
-Various handling effects affect aircraft with propellers, including the Asymmetric Effect (P-Factor) caused by the downward moving blade having a greater angle of attack than the upward moving blade, the Slipstream Effect which causes air to rotate as it passes over the aircraft, Torque Reaction resulting from Newton's third law of motion, and the Gyroscopic Effect (Precession) of a rotating propeller.`;
-
 export const propulsiveForceQuestions: Question[] = [
   { id: 1, text: "According to the text, what did the earliest practical aircraft designs use to create thrust?", options: ["Jet engines", "Propellers", "Rocket motors", "Turbofans", "Electric motors"], correctOptionIndex: 1 },
   { id: 2, text: "What improved propeller design replaced flat boards to create thrust through aerodynamic action?", options: ["Square-shaped blades", "Aerofoil shapes", "Metal rods", "Wooden planks", "Titanium sheets"], correctOptionIndex: 1 },
