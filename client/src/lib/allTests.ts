@@ -24,6 +24,7 @@ import { houseVocabularyReadingComprehensionQuestions, houseReadingPassage } fro
 import { houseVocabularyActionsQuestions, houseActionsReadingPassage } from "./houseVocabularyActionsQuestions";
 import { presentSimpleQuestions, presentSimpleReadingPassage } from "./presentSimpleQuestions";
 import { propulsiveForceQuestions } from "./propulsiveForceQuestions";
+import { propellerConstructionQuestions } from "./propellerConstructionQuestions";
 
 export const allTests: Record<string, TestConfig> = {
   "composite-materials": {
@@ -4750,6 +4751,13 @@ export const allTests: Record<string, TestConfig> = {
     description: "Comprehensive assessment on propulsive force, propeller design, operation, and handling effects. Students answer 102 technical questions covering propeller types, configurations, blade angles, pitch mechanisms, vibration, engine integration, and aerodynamic effects. Topics covered: propeller basics and thrust conversion, blade geometry and terminology, pitch and slip concepts, angle of attack, blade twist, propeller configurations, solidity, efficiency, tip speed effects, windmilling and feathering, reverse thrust, forces on blades, twisting moments, handling effects (P-factor, slipstream, torque, gyroscopic), critical engine selection, vibration and resonance, turboprop engines, and clearance specifications. 102 questions, 150 minutes.",
     durationMinutes: 150,
     questions: propulsiveForceQuestions,
+  },
+  "propeller-construction": {
+    id: "propeller-construction",
+    title: "Propeller Construction & Installation",
+    description: "Comprehensive assessment on propeller construction, materials, installation, and system integration. Students answer 102 technical questions covering propeller hub and blade components, material types (wood, metal, composite), fixed and variable pitch propellers, constant-speed systems, propeller installation methods (flanged, tapered, and splined shafts), safetying procedures, and governor installation. Topics covered: hub and blade parts, wooden propeller construction, aluminium and steel propellers, composite blade construction, wood-core propellers, fixed and ground-adjustable propellers, variable-pitch systems, double-acting and Hydromatic propellers, constant-speed propeller systems, shaft installation types, safetying and spinner installation, and governor controls. 102 questions, 150 minutes.",
+    durationMinutes: 150,
+    questions: propellerConstructionQuestions,
   },
 };
 
