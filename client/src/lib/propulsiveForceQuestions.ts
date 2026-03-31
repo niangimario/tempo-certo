@@ -1,7 +1,7 @@
 import type { Question } from "@shared/schema";
 
 export const propulsiveForceQuestions: Question[] = [
-  { id: 1, text: "According to the text, what did the earliest practical aircraft designs use to create thrust?", options: ["Jet engines", "Propellers", "Rocket motors"], correctOptionIndex: 1 },
+  { id: 1, text: "what did the earliest practical aircraft designs use to create thrust?", options: ["Jet engines", "Propellers", "Rocket motors"], correctOptionIndex: 1 },
   { id: 2, text: "What improved propeller design replaced flat boards to create thrust through aerodynamic action?", options: ["Square-shaped blades", "Aerofoil shapes", "Metal rods"], correctOptionIndex: 1 },
   { id: 3, text: "What material became widely used for propellers due to its structural strength?", options: ["Composite material", "Wood", "Aluminium alloy"], correctOptionIndex: 2 },
   { id: 4, text: "What is the function of a propeller?", options: ["To convert propulsive force into engine power", "To convert engine power into propulsive force", "To stabilize the aircraft in flight"], correctOptionIndex: 1 },
