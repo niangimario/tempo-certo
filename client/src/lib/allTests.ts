@@ -25,6 +25,7 @@ import { houseVocabularyActionsQuestions, houseActionsReadingPassage } from "./h
 import { presentSimpleQuestions, presentSimpleReadingPassage } from "./presentSimpleQuestions";
 import { propulsiveForceQuestions } from "./propulsiveForceQuestions";
 import { propellerConstructionQuestions } from "./propellerConstructionQuestions";
+import { propellerSystemsAdvancedQuestions } from "./propellerSystemsAdvancedQuestions";
 
 export const allTests: Record<string, TestConfig> = {
   "composite-materials": {
@@ -4758,6 +4759,13 @@ export const allTests: Record<string, TestConfig> = {
     description: "Comprehensive assessment on propeller construction, materials, installation, and system integration. Students answer 102 technical questions covering propeller hub and blade components, material types (wood, metal, composite), fixed and variable pitch propellers, constant-speed systems, propeller installation methods (flanged, tapered, and splined shafts), safetying procedures, and governor installation. Topics covered: hub and blade parts, wooden propeller construction, aluminium and steel propellers, composite blade construction, wood-core propellers, fixed and ground-adjustable propellers, variable-pitch systems, double-acting and Hydromatic propellers, constant-speed propeller systems, shaft installation types, safetying and spinner installation, and governor controls. 102 questions, 150 minutes.",
     durationMinutes: 150,
     questions: propellerConstructionQuestions,
+  },
+  "propeller-systems-advanced": {
+    id: "propeller-systems-advanced",
+    title: "General and Ground-Adjustable Propellers",
+    description: "Comprehensive assessment on general propeller systems and advanced concepts including ground-adjustable propellers, variable-pitch principles, pitch-changing mechanisms, hydromechanical governors, constant-speed systems, feathering and reverse thrust, pitch control, specific propeller systems (Hartzell, Dowty Rotol, Hamilton Standard Hydromatic), electrically operated propellers, FADEC controlled propellers, fine pitch stops, and operational procedures. Students answer 132 technical questions covering fundamental propeller principles, governor operation, feathering systems, advanced control systems, and system maintenance. 132 questions, 150 minutes.",
+    durationMinutes: 150,
+    questions: propellerSystemsAdvancedQuestions,
   },
 };
 
