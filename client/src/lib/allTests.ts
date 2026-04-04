@@ -27,6 +27,7 @@ import { propulsiveForceQuestions } from "./propulsiveForceQuestions";
 import { propellerConstructionQuestions } from "./propellerConstructionQuestions";
 import { propellerSystemsAdvancedQuestions } from "./propellerSystemsAdvancedQuestions";
 import { icingConditionsQuestions } from "./icingConditionsQuestions";
+import { propellerVibrationEngineRunningQuestions } from "./propellerVibrationEngineRunningQuestions";
 
 export const allTests: Record<string, TestConfig> = {
   "composite-materials": {
@@ -4774,6 +4775,13 @@ export const allTests: Record<string, TestConfig> = {
     description: "Assessment on aircraft ice protection systems covering icing conditions identification, fluid anti-icing systems (TKS systems), and electrical de-icing/anti-icing systems. Students answer 53 technical questions on recognizing icing conditions, system components and operation, maintenance procedures, inspection requirements, electrical system maintenance including brushes and slip rings, electrical testing protocols, functional tests, and repair procedures. Topics covered: icing conditions definition, anti-icing fluid systems, de-icing overshoes, governors and controllers, periodic inspections, electrical checks, and authorized repairs. 53 questions, 75 minutes.",
     durationMinutes: 75,
     questions: icingConditionsQuestions,
+  },
+  "propeller-vibration-engine-running": {
+    id: "propeller-vibration-engine-running",
+    title: "Propeller Vibration and Engine Running",
+    description: "Comprehensive assessment on propeller vibration analysis, balancing techniques, and engine running controls. Students answer 160 technical questions covering vibration causes and frequency analysis, static and dynamic balancing methods, spectrum surveys, aerodynamic balance, blade indexing, blade damage assessment and repair procedures for wooden, metal, and composite propellers, post-installation testing, lightning strike and overspeed inspection protocols, and propeller engine running controls for piston and turboprop engines. Topics include vibration fundamentals, propeller tracking, balancing instruments, fixed and variable-pitch propeller maintenance, FADEC systems, instrument interpretation, and operational procedures for various turboprop types (PT6, TPE331, Allison 250). 160 questions, 150 minutes.",
+    durationMinutes: 150,
+    questions: propellerVibrationEngineRunningQuestions,
   },
 };
 
