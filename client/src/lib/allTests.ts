@@ -26,6 +26,7 @@ import { presentSimpleQuestions, presentSimpleReadingPassage } from "./presentSi
 import { propulsiveForceQuestions } from "./propulsiveForceQuestions";
 import { propellerConstructionQuestions } from "./propellerConstructionQuestions";
 import { propellerSystemsAdvancedQuestions } from "./propellerSystemsAdvancedQuestions";
+import { icingConditionsQuestions } from "./icingConditionsQuestions";
 
 export const allTests: Record<string, TestConfig> = {
   "composite-materials": {
@@ -4766,6 +4767,13 @@ export const allTests: Record<string, TestConfig> = {
     description: "Comprehensive assessment on general propeller systems and advanced concepts including ground-adjustable propellers, variable-pitch principles, pitch-changing mechanisms, hydromechanical governors, constant-speed systems, feathering and reverse thrust, pitch control, specific propeller systems (Hartzell, Dowty Rotol, Hamilton Standard Hydromatic), electrically operated propellers, FADEC controlled propellers, fine pitch stops, and operational procedures. Students answer 132 technical questions covering fundamental propeller principles, governor operation, feathering systems, advanced control systems, and system maintenance. 132 questions, 150 minutes.",
     durationMinutes: 150,
     questions: propellerSystemsAdvancedQuestions,
+  },
+  "icing-conditions": {
+    id: "icing-conditions",
+    title: "Aircraft Ice Protection Systems - Icing Conditions & De/Anti-Icing",
+    description: "Assessment on aircraft ice protection systems covering icing conditions identification, fluid anti-icing systems (TKS systems), and electrical de-icing/anti-icing systems. Students answer 53 technical questions on recognizing icing conditions, system components and operation, maintenance procedures, inspection requirements, electrical system maintenance including brushes and slip rings, electrical testing protocols, functional tests, and repair procedures. Topics covered: icing conditions definition, anti-icing fluid systems, de-icing overshoes, governors and controllers, periodic inspections, electrical checks, and authorized repairs. 53 questions, 17 minutes.",
+    durationMinutes: 17,
+    questions: icingConditionsQuestions,
   },
 };
 
