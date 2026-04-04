@@ -4771,8 +4771,8 @@ export const allTests: Record<string, TestConfig> = {
   "icing-conditions": {
     id: "icing-conditions",
     title: "Aircraft Ice Protection Systems - Icing Conditions & De/Anti-Icing",
-    description: "Assessment on aircraft ice protection systems covering icing conditions identification, fluid anti-icing systems (TKS systems), and electrical de-icing/anti-icing systems. Students answer 53 technical questions on recognizing icing conditions, system components and operation, maintenance procedures, inspection requirements, electrical system maintenance including brushes and slip rings, electrical testing protocols, functional tests, and repair procedures. Topics covered: icing conditions definition, anti-icing fluid systems, de-icing overshoes, governors and controllers, periodic inspections, electrical checks, and authorized repairs. 53 questions, 17 minutes.",
-    durationMinutes: 17,
+    description: "Assessment on aircraft ice protection systems covering icing conditions identification, fluid anti-icing systems (TKS systems), and electrical de-icing/anti-icing systems. Students answer 53 technical questions on recognizing icing conditions, system components and operation, maintenance procedures, inspection requirements, electrical system maintenance including brushes and slip rings, electrical testing protocols, functional tests, and repair procedures. Topics covered: icing conditions definition, anti-icing fluid systems, de-icing overshoes, governors and controllers, periodic inspections, electrical checks, and authorized repairs. 53 questions, 75 minutes.",
+    durationMinutes: 75,
     questions: icingConditionsQuestions,
   },
 };
