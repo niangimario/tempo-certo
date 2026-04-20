@@ -29,6 +29,7 @@ import { propellerSystemsAdvancedQuestions } from "./propellerSystemsAdvancedQue
 import { icingConditionsQuestions } from "./icingConditionsQuestions";
 import { propellerVibrationEngineRunningQuestions } from "./propellerVibrationEngineRunningQuestions";
 import { fundamentalsGasTurbineEnginesQuestions } from "./fundamentalsGasTurbineEnginesQuestions";
+import { combustionTurbineExhaustLubricationQuestions } from "./combustionTurbineExhaustLubricationQuestions";
 
 export const allTests: Record<string, TestConfig> = {
   "composite-materials": {
@@ -4790,6 +4791,13 @@ export const allTests: Record<string, TestConfig> = {
     description: "Comprehensive assessment on the fundamentals of gas turbine engines covering historical development, jet engine classifications, gas turbine engine types, Newton's laws of motion and thrust principles, thermodynamics and gas laws, propulsive fundamentals including energy and power calculations, gas flow principles with convergent/divergent ducts, thermodynamic cycles, constructional arrangements, compressor design and operation, inlet systems, anti-icing systems, and operational procedures. Students answer 325 technical questions spanning 10 major themes: History & Pioneers (jet engine inventors and early development), Jet Engine Classification (Rocket, Ramjet, Pulsejet, Scramjet), Gas Turbine Engine Types (Turbojet, Turboprop, Turboshaft, Turbofan), Newton's Laws and thrust formulas, Thermodynamic principles and laws, Gas Laws (Avogadro, Boyle, Charles, Gay-Lussac, Dalton), Propulsive Fundamentals and efficiency, Gas Flow and shock waves, Thermodynamic Cycles (Otto and Brayton), and Compressor Systems covering centrifugal and axial flow designs, blade fixings, variable vanes, bleed valves, stall/surge prevention, and FADEC control systems. Additional coverage includes inlet design and efficiency, acoustic liners, anti-icing systems, and operational procedures for modern turbofan engines. 325 questions, 240 minutes (4 hours).",
     durationMinutes: 240,
     questions: fundamentalsGasTurbineEnginesQuestions,
+  },
+  "combustion-systems-lubrication": {
+    id: "combustion-systems-lubrication",
+    title: "Combustion Systems and Lubrication",
+    description: "Comprehensive assessment covering combustion systems, turbine mechanics, exhaust systems, thrust reversers, and engine lubrication. Topics include: combustion chamber types and principles (5-80 questions), turbine blade design, materials, and cooling methods (41-80 questions), exhaust systems and nozzle types (81-120 questions), thrust reverser types and operation including bucket door, clamshell, cascade vane, and blocker door reversers (121-180 questions), noise suppression methods, and complete lubrication system design. Lubrication coverage includes oil properties and specifications (181-225 questions), wet-sump and dry-sump systems, oil pumps (vane, gerotor, and gear types), filters, fuel-cooled oil coolers, air-oil separation, heat exchangers, chip detectors, system monitoring, bearings, lubrication details, and system schematics (226-320 questions). Also covers fuel specifications, fuel additives, refuelling safety precautions, and fuel contamination control. Answer all 320 questions in 240 minutes.",
+    durationMinutes: 240,
+    questions: combustionTurbineExhaustLubricationQuestions,
   },
 };
 
