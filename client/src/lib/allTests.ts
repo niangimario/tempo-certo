@@ -30,6 +30,7 @@ import { icingConditionsQuestions } from "./icingConditionsQuestions";
 import { propellerVibrationEngineRunningQuestions } from "./propellerVibrationEngineRunningQuestions";
 import { fundamentalsGasTurbineEnginesQuestions } from "./fundamentalsGasTurbineEnginesQuestions";
 import { combustionTurbineExhaustLubricationQuestions } from "./combustionTurbineExhaustLubricationQuestions";
+import { tvRemoteElectromagneticSpectrumQuestions } from "./tvRemoteElectromagneticSpectrumQuestions";
 
 export const allTests: Record<string, TestConfig> = {
   "composite-materials": {
@@ -4798,6 +4799,13 @@ export const allTests: Record<string, TestConfig> = {
     description: "Comprehensive assessment covering combustion systems, turbine mechanics, exhaust systems, thrust reversers, and engine lubrication. Topics include: combustion chamber types and principles (5-80 questions), turbine blade design, materials, and cooling methods (41-80 questions), exhaust systems and nozzle types (81-120 questions), thrust reverser types and operation including bucket door, clamshell, cascade vane, and blocker door reversers (121-180 questions), noise suppression methods, and complete lubrication system design. Lubrication coverage includes oil properties and specifications (181-225 questions), wet-sump and dry-sump systems, oil pumps (vane, gerotor, and gear types), filters, fuel-cooled oil coolers, air-oil separation, heat exchangers, chip detectors, system monitoring, bearings, lubrication details, and system schematics (226-320 questions). Also covers fuel specifications, fuel additives, refuelling safety precautions, and fuel contamination control. Answer all 320 questions in 240 minutes.",
     durationMinutes: 240,
     questions: combustionTurbineExhaustLubricationQuestions,
+  },
+  "tv-remote-electromagnetic-spectrum": {
+    id: "tv-remote-electromagnetic-spectrum",
+    title: "TV Remote Controls and Electromagnetic Spectrum",
+    description: "Comprehensive assessment covering TV remote controls, infrared technology, visible light spectrum, electromagnetic waves, radio bands (long, medium, short, VHF, UHF, microwaves), sensors, wavelength-frequency relationships, photon energy, and radiation terminology. Topics include: traditional infrared remote operation and components (Q1-20), infrared spectrum location and properties (Q21-35), visible light color spectrum and energy relationships (Q36-55), electromagnetic wave properties and speed-wavelength-frequency formula (Q56-75), complete electromagnetic spectrum from radio to gamma rays with frequency and energy ordering (Q76-100), detection of various EM radiation types by specialized sensors (Q101-110), radio wave classifications and applications (Q111-130), relationship between microwaves and radio waves with classification overlap (Q131-145), numerical wavelength and frequency intervals for radio bands (Q146-165), UHF-microwave overlap demonstrating classification convention differences (Q166-185), photon energy relationships and calculations (Q186-195), radiation terminology and why different waves are called radiation (Q196-202), and comprehensive review of all concepts (Q203-210). Answer all 210 questions in 150 minutes.",
+    durationMinutes: 150,
+    questions: tvRemoteElectromagneticSpectrumQuestions,
   },
 };
 
